@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_report_users_groups">
+    <sys_report_users_groups action="INSERT_OR_UPDATE">
+        <group_id/>
+        <report_id display_value="How many percentage you contributed in total for the target:">92cd1cb097f3111010c67b771153af3c</report_id>
+        <sys_class_name>sys_report_users_groups</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-12-13 11:55:15</sys_created_on>
+        <sys_id>1acd1cb097f3111010c67b771153af3c</sys_id>
+        <sys_name>92cd1cb097f3111010c67b771153af3c</sys_name>
+        <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_update_name>sys_report_users_groups_1acd1cb097f3111010c67b771153af3c</sys_update_name>
+        <user_id display_value="Defu Luo">b6ab05e59787111010c67b771153afe4</user_id>
+    </sys_report_users_groups>
+</record_update>

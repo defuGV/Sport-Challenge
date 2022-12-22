@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="type" table="x_933235_gvs_sport_sport_chal" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>type</element>
+            <name>x_933235_gvs_sport_sport_chal</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>admin_gv_dluo</sys_created_by>
+            <sys_created_on>2022-11-09 12:12:21</sys_created_on>
+            <sys_name>type</sys_name>
+            <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+            <sys_update_name>sys_choice_x_933235_gvs_sport_sport_chal_type</sys_update_name>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Outdoor</label>
+            <language>en</language>
+            <name>x_933235_gvs_sport_sport_chal</name>
+            <sequence>1</sequence>
+            <synonyms/>
+            <sys_created_by>admin_gv_dluo</sys_created_by>
+            <sys_created_on>2022-11-09 12:12:21</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <value>outdoor</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>type</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Indoor</label>
+            <language>en</language>
+            <name>x_933235_gvs_sport_sport_chal</name>
+            <sequence>2</sequence>
+            <synonyms/>
+            <sys_created_by>admin_gv_dluo</sys_created_by>
+            <sys_created_on>2022-11-09 12:12:29</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <value>indoor</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

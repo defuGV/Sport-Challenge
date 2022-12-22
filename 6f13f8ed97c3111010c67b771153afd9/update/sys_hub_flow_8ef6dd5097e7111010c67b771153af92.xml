@@ -1,0 +1,2443 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>false</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Includes Approval process and creates new record on the Sport challenge table if approved</description>
+        <internal_name>gvs_sport_challenge_proposal_flow</internal_name>
+        <label_cache>[{"name":"Service Catalog_1.request_item.request","label":"Trigger - Service Catalog➛Requested Item Record➛Request","reference":"sc_request","reference_display":"Request","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"request"},{"name":"9400c296-2738-4062-84c3-45341ce0dcef.__dont_treat_as_error__","label":"11 - Log➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9400c296-2738-4062-84c3-45341ce0dcef.__action_status__","label":"11 - Log➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Service Catalog_1.request_item.opened_by.first_name","label":"Trigger - Service Catalog➛Requested Item Record➛Opened by➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name"},{"name":"Service Catalog_1.request_item.opened_by.email","label":"Trigger - Service Catalog➛Requested Item Record➛Opened by➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"d3deffd3-b0bd-4b29-9cf4-32293ee822c6.__dont_treat_as_error__","label":"10 - Send Email➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d3deffd3-b0bd-4b29-9cf4-32293ee822c6.__action_status__","label":"10 - Send Email➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d3deffd3-b0bd-4b29-9cf4-32293ee822c6.email","label":"10 - Send Email➛email","reference":"sys_email","reference_display":"email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3ce44510-07ff-4d47-bccf-2ea1b3c015b7.__dont_treat_as_error__","label":"10 - Send Notification➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}},{"name":"3ce44510-07ff-4d47-bccf-2ea1b3c015b7.__action_status__","label":"10 - Send Notification➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"415be0dc-6ab1-47d5-af2e-69fd74655501.__dont_treat_as_error__","label":"8 - Update Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"415be0dc-6ab1-47d5-af2e-69fd74655501.__action_status__","label":"8 - Update Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"415be0dc-6ab1-47d5-af2e-69fd74655501.table_name","label":"8 - Update Record➛Sport Challenge Table","reference":"x_933235_gvs_sport_sport_chal","reference_display":"Sport Challenge Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"415be0dc-6ab1-47d5-af2e-69fd74655501.record","label":"8 - Update Record➛Sport Challenge Record","reference":"x_933235_gvs_sport_sport_chal","reference_display":"Sport Challenge Record","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"66f0d4a7-a547-41d8-8eef-945d071bfdb3.__dont_treat_as_error__","label":"6 - Update Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"66f0d4a7-a547-41d8-8eef-945d071bfdb3.__action_status__","label":"6 - Update Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"66f0d4a7-a547-41d8-8eef-945d071bfdb3.table_name","label":"6 - Update Record➛Sport Challenge Table","reference":"x_933235_gvs_sport_sport_chal","reference_display":"Sport Challenge Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"66f0d4a7-a547-41d8-8eef-945d071bfdb3.record","label":"6 - Update Record➛Sport Challenge Record","reference":"x_933235_gvs_sport_sport_chal","reference_display":"Sport Challenge Record","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2064553b-d7e4-4b9f-876d-cd9e054a35cd.__dont_treat_as_error__","label":"7 - Create Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2064553b-d7e4-4b9f-876d-cd9e054a35cd.__action_status__","label":"7 - Create Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2064553b-d7e4-4b9f-876d-cd9e054a35cd.table_name","label":"7 - Create Record➛Sport Challenge Table","reference":"x_933235_gvs_sport_sport_chal","reference_display":"Sport Challenge","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2064553b-d7e4-4b9f-876d-cd9e054a35cd.record","label":"7 - Create Record➛Sport Challenge Record","reference":"x_933235_gvs_sport_sport_chal","reference_display":"Sport Challenge","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Service Catalog_1.request_item.opened_by.company","label":"Trigger - Service Catalog➛Requested Item Record➛Opened by➛Company","reference":"core_company","reference_display":"Company","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"company"},{"name":"Service Catalog_1.request_item.opened_by","label":"Trigger - Service Catalog➛Requested Item Record➛Opened by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"opened_by"},{"name":"6a4104f2-96ff-4203-a300-d1515372bac6.__dont_treat_as_error__","label":"7 - Create Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6a4104f2-96ff-4203-a300-d1515372bac6.__action_status__","label":"7 - Create Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6a4104f2-96ff-4203-a300-d1515372bac6.table_name","label":"7 - Create Record➛Sport Challenge Table","reference":"x_933235_gvs_sport_sport_chal","reference_display":"Sport Challenge","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6a4104f2-96ff-4203-a300-d1515372bac6.record","label":"7 - Create Record➛Sport Challenge Record","reference":"x_933235_gvs_sport_sport_chal","reference_display":"Sport Challenge","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Service Catalog_1.request_item.requested_for.company","label":"Trigger - Service Catalog➛Requested Item Record➛Requested for➛Company","reference":"core_company","reference_display":"Company","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"company"},{"name":"Service Catalog_1.request_item.requested_for","label":"Trigger - Service Catalog➛Requested Item Record➛Requested for","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"requested_for"},{"name":"b318e314-8c96-40a1-ba3d-969aebafb704.target","label":"3 - Get Catalog Variables➛target","reference":"","reference_display":"target","type":"string","base_type":"string","attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"b318e314-8c96-40a1-ba3d-969aebafb704.type","label":"3 - Get Catalog Variables➛type","reference":"","reference_display":"type","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":100.0},{"label":"Outdoor","value":"outdoor","order":100.0},{"label":"Indoor","value":"indoor","order":100.0}],"attributes":{"catalogType":"5","catalogTypeLabel":"Select Box"}},{"name":"b318e314-8c96-40a1-ba3d-969aebafb704.name","label":"3 - Get Catalog Variables➛name","reference":"","reference_display":"name","type":"string","base_type":"string","attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"905f9e50-1019-4458-b853-514723b441c9.approval_state","label":"1 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"905f9e50-1019-4458-b853-514723b441c9.__action_status__","label":"1 - Ask For Approval➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"905f9e50-1019-4458-b853-514723b441c9.__dont_treat_as_error__","label":"1 - Ask For Approval➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Service Catalog_1.request_item","label":"Trigger - Service Catalog➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","attributes":{"default_search_field":"number"}},{"name":"{{static.74888d9097a7111010c67b771153af14}}","label":"Sport challenge approvers","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference"},{"name":"c20ac299-40ae-4938-815a-51ea4cbf7087.record","label":"4 - Create Record➛Sport Challenge Record","reference":"x_933235_gvs_sport_sport_chal","reference_display":"Sport Challenge Record","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c20ac299-40ae-4938-815a-51ea4cbf7087.table_name","label":"4 - Create Record➛Sport Challenge Table","reference":"x_933235_gvs_sport_sport_chal","reference_display":"Sport Challenge Table","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c20ac299-40ae-4938-815a-51ea4cbf7087.__action_status__","label":"4 - Create Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c20ac299-40ae-4938-815a-51ea4cbf7087.__dont_treat_as_error__","label":"4 - Create Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b318e314-8c96-40a1-ba3d-969aebafb704.subtype_outdoor","label":"3 - Get Catalog Variables➛subtype_outdoor","reference":"","reference_display":"subtype_outdoor","type":"choice","base_type":"choice","choices":[{"label":"Cycling","value":"cycling","order":100.0},{"label":"Running","value":"running","order":100.0}],"attributes":{"catalogType":"5","catalogTypeLabel":"Select Box"}},{"name":"b318e314-8c96-40a1-ba3d-969aebafb704.subtype_indoor","label":"3 - Get Catalog Variables➛subtype_indoor","reference":"","reference_display":"subtype_indoor","type":"choice","base_type":"choice","choices":[{"label":"Climbing stairs","value":"climbing_stairs","order":100.0},{"label":"Pushup","value":"pushup","order":100.0}],"attributes":{"catalogType":"5","catalogTypeLabel":"Select Box"}}]</label_cache>
+        <master_snapshot>3c99919497e7111010c67b771153af38</master_snapshot>
+        <name>GVS_SPORT Challenge proposal flow</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>1199919497e7111010c67b771153afbb</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>draft</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:32:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8ef6dd5097e7111010c67b771153af92</sys_id>
+        <sys_name>GVS_SPORT Challenge proposal flow</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_update_name>sys_hub_flow_8ef6dd5097e7111010c67b771153af92</sys_update_name>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=8ef6dd5097e7111010c67b771153af92"/>
+    <sys_variable_value action="delete_multiple" query="document_key=8ef6dd5097e7111010c67b771153af92"/>
+    <sys_flow_catalog_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <catalog_item/>
+        <name/>
+        <run_flow_in/>
+        <sys_class_name>sys_flow_catalog_trigger</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1199919497e7111010c67b771153afbb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 08:23:16</sys_updated_on>
+    </sys_flow_catalog_trigger>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=8ef6dd5097e7111010c67b771153af92"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=8ef6dd5097e7111010c67b771153af92^sys_idNOT INe607d99097e7111010c67b771153af3f"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment>Sport Challenge proposed</comment>
+        <display_text/>
+        <flow display_value="GVS_SPORT Challenge proposal flow">8ef6dd5097e7111010c67b771153af92</flow>
+        <name>Service Catalog</name>
+        <remote_sys_id/>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:32:45</sys_created_on>
+        <sys_id>e607d99097e7111010c67b771153af3f</sys_id>
+        <sys_mod_count>40</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:34</sys_updated_on>
+        <trigger_definition display_value="Service Catalog">c43a1011c36813002841b63b12d3ae15</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>service_catalog</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=e607d99097e7111010c67b771153af3f"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=8ef6dd5097e7111010c67b771153af92^sys_idNOT IN045ab12897e7511010c67b771153afd2,4c5ab12897e7511010c67b771153afd1,aedb71a897e7511010c67b771153af7f,d751ca20972b511010c67b771153af94"/>
+    <sys_hub_flow_stage action="INSERT_OR_UPDATE">
+        <always_show>true</always_show>
+        <ancestor_array_position>0</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id/>
+        <ancestral_if_else_logic/>
+        <component_indexes>2</component_indexes>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="GVS_SPORT Challenge proposal flow">8ef6dd5097e7111010c67b771153af92</flow>
+        <label>Challenge accepted</label>
+        <order>1</order>
+        <stage_id>37b0d98b-ea59-4da7-b0e6-27dfe372935a</stage_id>
+        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 13:45:21</sys_created_on>
+        <sys_id>045ab12897e7511010c67b771153afd2</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 15:52:37</sys_updated_on>
+        <type>standard</type>
+        <value>accepted</value>
+    </sys_hub_flow_stage>
+    <sys_hub_flow_stage action="INSERT_OR_UPDATE">
+        <always_show>true</always_show>
+        <ancestor_array_position>0</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id/>
+        <ancestral_if_else_logic/>
+        <component_indexes>0</component_indexes>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="GVS_SPORT Challenge proposal flow">8ef6dd5097e7111010c67b771153af92</flow>
+        <label>Waiting for Challenge Approval</label>
+        <order>0</order>
+        <stage_id>14571bde-7959-4da7-b48b-025a7e819f2e</stage_id>
+        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 13:45:21</sys_created_on>
+        <sys_id>4c5ab12897e7511010c67b771153afd1</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 15:39:31</sys_updated_on>
+        <type>standard</type>
+        <value>approval</value>
+    </sys_hub_flow_stage>
+    <sys_hub_flow_stage action="INSERT_OR_UPDATE">
+        <always_show>true</always_show>
+        <ancestor_array_position>0</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id/>
+        <ancestral_if_else_logic/>
+        <component_indexes>10</component_indexes>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="GVS_SPORT Challenge proposal flow">8ef6dd5097e7111010c67b771153af92</flow>
+        <label>Completed</label>
+        <order>2</order>
+        <stage_id>9c964e1c-ff92-4de9-80a9-60aae5f4f6eb</stage_id>
+        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 13:52:04</sys_created_on>
+        <sys_id>aedb71a897e7511010c67b771153af7f</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 15:39:31</sys_updated_on>
+        <type>standard</type>
+        <value>completed</value>
+    </sys_hub_flow_stage>
+    <sys_hub_flow_stage action="INSERT_OR_UPDATE">
+        <always_show>true</always_show>
+        <ancestor_array_position>0</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id/>
+        <ancestral_if_else_logic/>
+        <component_indexes>9</component_indexes>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="GVS_SPORT Challenge proposal flow">8ef6dd5097e7111010c67b771153af92</flow>
+        <label>Challenge rejected</label>
+        <order>3</order>
+        <stage_id>73cf9cc4-f93d-4d08-8671-788141b1dcba</stage_id>
+        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 14:16:09</sys_created_on>
+        <sys_id>d751ca20972b511010c67b771153af94</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 15:39:31</sys_updated_on>
+        <type>standard</type>
+        <value>rejected</value>
+    </sys_hub_flow_stage>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=8ef6dd5097e7111010c67b771153af92^sys_idNOT IN42f6dd5097e7111010c67b771153af95"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>8ef6dd5097e7111010c67b771153af92</id>
+        <name>GVS_Sport Challenge proposal flow</name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:32:27</sys_created_on>
+        <sys_id>42f6dd5097e7111010c67b771153af95</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:32:27</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=42f6dd5097e7111010c67b771153af95"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=8ef6dd5097e7111010c67b771153af92^sys_idNOT IN9e07999097e7111010c67b771153af68,d207d99097e7111010c67b771153af37"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>request_item</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Request Item</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="GVS_SPORT Challenge proposal flow">8ef6dd5097e7111010c67b771153af92</model>
+        <model_id>8ef6dd5097e7111010c67b771153af92</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_8ef6dd5097e7111010c67b771153af92</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:32:44</sys_created_on>
+        <sys_id>9e07999097e7111010c67b771153af68</sys_id>
+        <sys_mod_count>31</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:34</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>sc_req_item</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="GVS_SPORT Challenge proposal flow">8ef6dd5097e7111010c67b771153af92</model>
+        <model_id>8ef6dd5097e7111010c67b771153af92</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_8ef6dd5097e7111010c67b771153af92</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>true</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:32:44</sys_created_on>
+        <sys_id>d207d99097e7111010c67b771153af37</sys_id>
+        <sys_mod_count>32</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:34</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="delete_multiple" query="model=8ef6dd5097e7111010c67b771153af92"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8ef6dd5097e7111010c67b771153af92"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=8ef6dd5097e7111010c67b771153af92^sys_idNOT IN64ed8dec9727511010c67b771153aff1,67591d5497e7111010c67b771153af8d,6a681d1497e7111010c67b771153af36,6cf7ddd097e7111010c67b771153afed,dce54a64972b511010c67b771153af2c,f8ed8dec9727511010c67b771153affc,f8edcdec9727511010c67b771153af08"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment>subtype outdoor</comment>
+        <display_text/>
+        <flow display_value="GVS_SPORT Challenge proposal flow">8ef6dd5097e7111010c67b771153af92</flow>
+        <order>6</order>
+        <parent_ui_id>62b1c82a-a084-4be3-863b-552ee69e359b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:14</sys_created_on>
+        <sys_id>64ed8dec9727511010c67b771153aff1</sys_id>
+        <sys_mod_count>72</sys_mod_count>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:34:37</sys_updated_on>
+        <ui_id>66f0d4a7-a547-41d8-8eef-945d071bfdb3</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=64ed8dec9727511010c67b771153aff1"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>64ed8dec9727511010c67b771153aff1</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:14</sys_created_on>
+        <sys_id>7ced8dec9727511010c67b771153aff3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 10:31:14</sys_updated_on>
+        <value>x_933235_gvs_sport_sport_chal</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=64ed8dec9727511010c67b771153aff1"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>64ed8dec9727511010c67b771153aff1</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:14</sys_created_on>
+        <sys_id>f8ed8dec9727511010c67b771153aff3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 10:31:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{c20ac299-40ae-4938-815a-51ea4cbf7087.record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>64ed8dec9727511010c67b771153aff1</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:14</sys_created_on>
+        <sys_id>70ed8dec9727511010c67b771153aff3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 10:31:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>64ed8dec9727511010c67b771153aff1</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:14</sys_created_on>
+        <sys_id>38ed8dec9727511010c67b771153aff3</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>subtype={{b318e314-8c96-40a1-ba3d-969aebafb704.subtype_outdoor}}^=</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=64ed8dec9727511010c67b771153aff1"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=64ed8dec9727511010c67b771153aff1"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
+        <action_type_parent/>
+        <comment>Use catalog variables to prefill a new Sport Challenge Record</comment>
+        <display_text/>
+        <flow display_value="GVS_SPORT Challenge proposal flow">8ef6dd5097e7111010c67b771153af92</flow>
+        <order>3</order>
+        <parent_ui_id>93436a94-ffcf-4c55-b48c-c2626b36133a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:42:56</sys_created_on>
+        <sys_id>67591d5497e7111010c67b771153af8d</sys_id>
+        <sys_mod_count>94</sys_mod_count>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:34:37</sys_updated_on>
+        <ui_id>b318e314-8c96-40a1-ba3d-969aebafb704</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=67591d5497e7111010c67b771153af8d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>67591d5497e7111010c67b771153af8d</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:42:56</sys_created_on>
+        <sys_id>27591d5497e7111010c67b771153af8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:42:56</sys_updated_on>
+        <value>8c5d8dd497a7111010c67b771153af5f:item_option_new,caddc51897a7111010c67b771153af66:item_option_new,3773559c97a7111010c67b771153afef:item_option_new,7fcf4d5897a7111010c67b771153af75:item_option_new,c5f4911097e7111010c67b771153afc0:item_option_new</value>
+        <variable display_value="Catalog Variables">7b0ba3abc31013002841b63b12d3aef7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>67591d5497e7111010c67b771153af8d</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:42:56</sys_created_on>
+        <sys_id>e7591d5497e7111010c67b771153af8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:42:56</sys_updated_on>
+        <value>8c7b015497a7111010c67b771153af18</value>
+        <variable display_value="Template Catalog Items and Variable Sets">bb0ba3abc31013002841b63b12d3aef1</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=67591d5497e7111010c67b771153af8d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>catalog_variables</field>
+        <id>67591d5497e7111010c67b771153af8d</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:42:56</sys_created_on>
+        <sys_id>2f591d5497e7111010c67b771153af8e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:42:56</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>requested_item</field>
+        <id>67591d5497e7111010c67b771153af8d</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:42:56</sys_created_on>
+        <sys_id>a3591d5497e7111010c67b771153af8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:42:56</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>template_catalog_item</field>
+        <id>67591d5497e7111010c67b771153af8d</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:42:56</sys_created_on>
+        <sys_id>ef591d5497e7111010c67b771153af8e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:42:56</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=67591d5497e7111010c67b771153af8d"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=67591d5497e7111010c67b771153af8d"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent/>
+        <comment>New, filled record (no subtype)</comment>
+        <display_text/>
+        <flow display_value="GVS_SPORT Challenge proposal flow">8ef6dd5097e7111010c67b771153af92</flow>
+        <order>4</order>
+        <parent_ui_id>93436a94-ffcf-4c55-b48c-c2626b36133a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:38:45</sys_created_on>
+        <sys_id>6a681d1497e7111010c67b771153af36</sys_id>
+        <sys_mod_count>96</sys_mod_count>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:34:37</sys_updated_on>
+        <ui_id>c20ac299-40ae-4938-815a-51ea4cbf7087</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=6a681d1497e7111010c67b771153af36"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6a681d1497e7111010c67b771153af36</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:38:45</sys_created_on>
+        <sys_id>a6681d1497e7111010c67b771153af38</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:38:45</sys_updated_on>
+        <value>x_933235_gvs_sport_sport_chal</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6a681d1497e7111010c67b771153af36</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:38:45</sys_created_on>
+        <sys_id>e2681d1497e7111010c67b771153af38</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:42:56</sys_updated_on>
+        <value/>
+        <variable display_value="Fields">6de09916c31332002841b63b12d3ae1b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=6a681d1497e7111010c67b771153af36"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>6a681d1497e7111010c67b771153af36</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:38:45</sys_created_on>
+        <sys_id>ae681d1497e7111010c67b771153af37</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:38:45</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>6a681d1497e7111010c67b771153af36</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:38:45</sys_created_on>
+        <sys_id>62681d1497e7111010c67b771153af38</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 15:03:53</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>name={{b318e314-8c96-40a1-ba3d-969aebafb704.name}}^type={{b318e314-8c96-40a1-ba3d-969aebafb704.type}}^target={{b318e314-8c96-40a1-ba3d-969aebafb704.target}}^requested_by={{Service Catalog_1.request_item.opened_by}}^company={{Service Catalog_1.request_item.opened_by.company}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6a681d1497e7111010c67b771153af36"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6a681d1497e7111010c67b771153af36"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent/>
+        <comment>Get Approval by Sport challenge approver</comment>
+        <display_text/>
+        <flow display_value="GVS_SPORT Challenge proposal flow">8ef6dd5097e7111010c67b771153af92</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:36:43</sys_created_on>
+        <sys_id>6cf7ddd097e7111010c67b771153afed</sys_id>
+        <sys_mod_count>100</sys_mod_count>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:34:37</sys_updated_on>
+        <ui_id>905f9e50-1019-4458-b853-514723b441c9</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=6cf7ddd097e7111010c67b771153afed"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6cf7ddd097e7111010c67b771153afed</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:36:43</sys_created_on>
+        <sys_id>28f7ddd097e7111010c67b771153aff2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:36:43</sys_updated_on>
+        <value/>
+        <variable display_value="Due Date">c5f2e9920b10030085c083eb37673af9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6cf7ddd097e7111010c67b771153afed</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:36:43</sys_created_on>
+        <sys_id>64f7ddd097e7111010c67b771153aff2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:36:43</sys_updated_on>
+        <value>approval_history</value>
+        <variable display_value="Journal Field">c1f2e9920b10030085c083eb37673ae3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6cf7ddd097e7111010c67b771153afed</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:36:43</sys_created_on>
+        <sys_id>e8f7ddd097e7111010c67b771153aff1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:36:43</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="Approval Field">01f2e9920b10030085c083eb37673ad8</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>6cf7ddd097e7111010c67b771153afed</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:36:43</sys_created_on>
+        <sys_id>e8f7ddd097e7111010c67b771153aff2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:36:43</sys_updated_on>
+        <value>sc_req_item</value>
+        <variable display_value="Table">bcf2e9920b10030085c083eb37673acc</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=6cf7ddd097e7111010c67b771153afed"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_conditions</field>
+        <id>6cf7ddd097e7111010c67b771153afed</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:36:43</sys_created_on>
+        <sys_id>a4f7ddd097e7111010c67b771153aff1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:36:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>ApprovesRejectsAnyG[{{static.74888d9097a7111010c67b771153af14}}]</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_field</field>
+        <id>6cf7ddd097e7111010c67b771153afed</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:36:43</sys_created_on>
+        <sys_id>64f7ddd097e7111010c67b771153aff0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:36:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>due_date</field>
+        <id>6cf7ddd097e7111010c67b771153afed</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:36:43</sys_created_on>
+        <sys_id>e0f7ddd097e7111010c67b771153aff1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:36:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{"action":"none","date_type":"actual","date":"{{}}","duration":1,"duration_type":"days","schedule":"","schedule_label":""}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>journal_field</field>
+        <id>6cf7ddd097e7111010c67b771153afed</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:36:43</sys_created_on>
+        <sys_id>6cf7ddd097e7111010c67b771153aff0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:36:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>6cf7ddd097e7111010c67b771153afed</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:36:43</sys_created_on>
+        <sys_id>20f7ddd097e7111010c67b771153aff1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:36:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>6cf7ddd097e7111010c67b771153afed</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:36:43</sys_created_on>
+        <sys_id>68f7ddd097e7111010c67b771153aff1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:36:43</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6cf7ddd097e7111010c67b771153afed"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6cf7ddd097e7111010c67b771153afed"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Log">5bc1bcc6531003003bf1d9109ec587d4</action_type>
+        <action_type_parent/>
+        <comment/>
+        <display_text/>
+        <flow display_value="GVS_SPORT Challenge proposal flow">8ef6dd5097e7111010c67b771153af92</flow>
+        <order>11</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 14:35:53</sys_created_on>
+        <sys_id>dce54a64972b511010c67b771153af2c</sys_id>
+        <sys_mod_count>50</sys_mod_count>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:34:37</sys_updated_on>
+        <ui_id>9400c296-2738-4062-84c3-45341ce0dcef</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=dce54a64972b511010c67b771153af2c"/>
+    <sys_element_mapping action="delete_multiple" query="id=dce54a64972b511010c67b771153af2c"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>log_message</field>
+        <id>dce54a64972b511010c67b771153af2c</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 14:35:53</sys_created_on>
+        <sys_id>58e54a64972b511010c67b771153af2e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 14:35:53</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5bc1bcc6531003003bf1d9109ec587d4</table>
+        <value>Processing of request {{Service Catalog_1.request_item.request}} finished.</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=dce54a64972b511010c67b771153af2c"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=dce54a64972b511010c67b771153af2c"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent/>
+        <comment>subtype indoor</comment>
+        <display_text/>
+        <flow display_value="GVS_SPORT Challenge proposal flow">8ef6dd5097e7111010c67b771153af92</flow>
+        <order>8</order>
+        <parent_ui_id>114ad9fa-9166-43ea-8745-a1b280a91c27</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:14</sys_created_on>
+        <sys_id>f8ed8dec9727511010c67b771153affc</sys_id>
+        <sys_mod_count>72</sys_mod_count>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:34:37</sys_updated_on>
+        <ui_id>415be0dc-6ab1-47d5-af2e-69fd74655501</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=f8ed8dec9727511010c67b771153affc"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f8ed8dec9727511010c67b771153affc</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:14</sys_created_on>
+        <sys_id>34ed8dec9727511010c67b771153affe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 10:31:14</sys_updated_on>
+        <value>x_933235_gvs_sport_sport_chal</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=f8ed8dec9727511010c67b771153affc"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>f8ed8dec9727511010c67b771153affc</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:14</sys_created_on>
+        <sys_id>b0ed8dec9727511010c67b771153affe</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 10:31:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{c20ac299-40ae-4938-815a-51ea4cbf7087.record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>f8ed8dec9727511010c67b771153affc</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:14</sys_created_on>
+        <sys_id>3ced8dec9727511010c67b771153affd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 10:31:14</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>f8ed8dec9727511010c67b771153affc</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:14</sys_created_on>
+        <sys_id>fced8dec9727511010c67b771153affd</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:27</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>subtype={{b318e314-8c96-40a1-ba3d-969aebafb704.subtype_indoor}}^=</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=f8ed8dec9727511010c67b771153affc"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f8ed8dec9727511010c67b771153affc"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent/>
+        <comment>Inform User about Rejection</comment>
+        <display_text/>
+        <flow display_value="GVS_SPORT Challenge proposal flow">8ef6dd5097e7111010c67b771153af92</flow>
+        <order>10</order>
+        <parent_ui_id>9e8d7881-a7a7-44c1-a113-945443e2c578</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:14</sys_created_on>
+        <sys_id>f8edcdec9727511010c67b771153af08</sys_id>
+        <sys_mod_count>72</sys_mod_count>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:34:37</sys_updated_on>
+        <ui_id>d3deffd3-b0bd-4b29-9cf4-32293ee822c6</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=f8edcdec9727511010c67b771153af08"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f8edcdec9727511010c67b771153af08</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:15</sys_created_on>
+        <sys_id>34edcdec9727511010c67b771153af0b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 10:31:15</sys_updated_on>
+        <value/>
+        <variable display_value="Body">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>f8edcdec9727511010c67b771153af08</document_key>
+        <order>6</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:15</sys_created_on>
+        <sys_id>f4edcdec9727511010c67b771153af0b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 10:31:15</sys_updated_on>
+        <value>Proposed Sport Challenge rejected</value>
+        <variable display_value="Subject">5d806bf4a70323008299b39f087901ec</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=f8edcdec9727511010c67b771153af08"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>f8edcdec9727511010c67b771153af08</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:15</sys_created_on>
+        <sys_id>fcedcdec9727511010c67b771153af0a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 10:31:15</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>&lt;p data-tinymcerootblock=""&gt;Hello &lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:1ea53d0e-3c9a-487d-b520-6fc01612de67}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:1ea53d0e-3c9a-487d-b520-6fc01612de67}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-for="ah_tooltipTop" data-tip="Trigger - Service Catalog &amp;gt; Requested Item Record &amp;gt; Opened by &amp;gt; First name"&gt;&lt;span class="pill-start"&gt;Trigger - Service Catalog&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;First name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_1ea53d0e-3c9a-487d-b520-6fc01612de67" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;,&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;unfortunately your proposed Sport Challenge was rejected.&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;(This is an automated message.)&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&amp;nbsp;&lt;/p&gt;</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>f8edcdec9727511010c67b771153af08</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:15</sys_created_on>
+        <sys_id>b0edcdec9727511010c67b771153af0b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 10:31:15</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>f8edcdec9727511010c67b771153af08</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:15</sys_created_on>
+        <sys_id>3cedcdec9727511010c67b771153af0a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 10:31:15</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Service Catalog_1.request_item.opened_by.email}} </value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=f8edcdec9727511010c67b771153af08"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=f8edcdec9727511010c67b771153af08"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=8ef6dd5097e7111010c67b771153af92"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=8ef6dd5097e7111010c67b771153af92^sys_idNOT IN2facac2097e3511010c67b771153af70,33acac2097e3511010c67b771153af79,bb38d51497e7111010c67b771153afdb,ebacac2097e3511010c67b771153af69"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">e3acac2097e3511010c67b771153af70</block>
+        <comment>Type is Indoor</comment>
+        <connected_to>62b1c82a-a084-4be3-863b-552ee69e359b</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="GVS_SPORT Challenge proposal flow">8ef6dd5097e7111010c67b771153af92</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>93436a94-ffcf-4c55-b48c-c2626b36133a</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 08:06:10</sys_created_on>
+        <sys_id>2facac2097e3511010c67b771153af70</sys_id>
+        <sys_mod_count>33</sys_mod_count>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:34</sys_updated_on>
+        <ui_id>114ad9fa-9166-43ea-8745-a1b280a91c27</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=2facac2097e3511010c67b771153af70"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=2facac2097e3511010c67b771153af70"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=2facac2097e3511010c67b771153af70"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">f7acac2097e3511010c67b771153af78</block>
+        <comment/>
+        <connected_to>93436a94-ffcf-4c55-b48c-c2626b36133a</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="GVS_SPORT Challenge proposal flow">8ef6dd5097e7111010c67b771153af92</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 08:06:10</sys_created_on>
+        <sys_id>33acac2097e3511010c67b771153af79</sys_id>
+        <sys_mod_count>33</sys_mod_count>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:34</sys_updated_on>
+        <ui_id>9e8d7881-a7a7-44c1-a113-945443e2c578</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=33acac2097e3511010c67b771153af79"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=33acac2097e3511010c67b771153af79"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=33acac2097e3511010c67b771153af79"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">fb38d51497e7111010c67b771153afda</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="GVS_SPORT Challenge proposal flow">8ef6dd5097e7111010c67b771153af92</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:38:01</sys_created_on>
+        <sys_id>bb38d51497e7111010c67b771153afdb</sys_id>
+        <sys_mod_count>37</sys_mod_count>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:34</sys_updated_on>
+        <ui_id>93436a94-ffcf-4c55-b48c-c2626b36133a</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=bb38d51497e7111010c67b771153afdb"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>bb38d51497e7111010c67b771153afdb</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:38:01</sys_created_on>
+        <sys_id>bb38d51497e7111010c67b771153afdf</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 14:44:10</sys_updated_on>
+        <value>Challenge Approved</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=bb38d51497e7111010c67b771153afdb"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>bb38d51497e7111010c67b771153afdb</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:38:01</sys_created_on>
+        <sys_id>3b38d51497e7111010c67b771153afdf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:38:01</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{905f9e50-1019-4458-b853-514723b441c9.approval_state}}=approved</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>bb38d51497e7111010c67b771153afdb</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:38:01</sys_created_on>
+        <sys_id>7738d51497e7111010c67b771153afdf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:38:01</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=bb38d51497e7111010c67b771153afdb"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=bb38d51497e7111010c67b771153afdb"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">6facac2097e3511010c67b771153af68</block>
+        <comment>add subtype</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="GVS_SPORT Challenge proposal flow">8ef6dd5097e7111010c67b771153af92</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>93436a94-ffcf-4c55-b48c-c2626b36133a</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 08:06:10</sys_created_on>
+        <sys_id>ebacac2097e3511010c67b771153af69</sys_id>
+        <sys_mod_count>33</sys_mod_count>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:34</sys_updated_on>
+        <ui_id>62b1c82a-a084-4be3-863b-552ee69e359b</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=ebacac2097e3511010c67b771153af69"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>ebacac2097e3511010c67b771153af69</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 08:06:10</sys_created_on>
+        <sys_id>67acac2097e3511010c67b771153af6d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 08:06:10</sys_updated_on>
+        <value>If Type is Outdoor</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=ebacac2097e3511010c67b771153af69"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>ebacac2097e3511010c67b771153af69</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 08:06:10</sys_created_on>
+        <sys_id>e3acac2097e3511010c67b771153af6d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 08:06:10</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{b318e314-8c96-40a1-ba3d-969aebafb704.type}}=outdoor</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>ebacac2097e3511010c67b771153af69</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 08:06:10</sys_created_on>
+        <sys_id>2facac2097e3511010c67b771153af6c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 08:06:10</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=ebacac2097e3511010c67b771153af69"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=ebacac2097e3511010c67b771153af69"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=8ef6dd5097e7111010c67b771153af92^sys_idNOT IN7cedcdec9727511010c67b771153af12"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>8ef6dd5097e7111010c67b771153af92</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Service Catalog_1.request_item.opened_by.first_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:15</sys_created_on>
+        <sys_id>7cedcdec9727511010c67b771153af12</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 10:31:15</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>1ea53d0e-3c9a-487d-b520-6fc01612de67</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=8ef6dd5097e7111010c67b771153af92"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_8ef6dd5097e7111010c67b771153af92^sys_idNOT IN5e07d99097e7111010c67b771153af3b,9e07999097e7111010c67b771153af6e"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8ef6dd5097e7111010c67b771153af92</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:32:44</sys_created_on>
+        <sys_id>5e07d99097e7111010c67b771153af3b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:32:44</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>request_item</element>
+        <help/>
+        <hint/>
+        <label>Request Item</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8ef6dd5097e7111010c67b771153af92</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:32:44</sys_created_on>
+        <sys_id>9e07999097e7111010c67b771153af6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:32:44</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_8ef6dd5097e7111010c67b771153af92"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_8ef6dd5097e7111010c67b771153af92"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_8ef6dd5097e7111010c67b771153af92"/>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=8ef6dd5097e7111010c67b771153af92^sys_idNOT IN1999919497e7111010c67b771153afbb"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"1999919497e7111010c67b771153afbb","name":"plan","plan_signature":null}}</plan>
+        <plan_id>8ef6dd5097e7111010c67b771153af92</plan_id>
+        <snapshot>c98a46f09763111010c67b771153af61</snapshot>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:51</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1999919497e7111010c67b771153afbb</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:34</sys_updated_on>
+        <trigger display_value="">1199919497e7111010c67b771153afbb</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=8ef6dd5097e7111010c67b771153af92"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>Includes Approval process and creates new record on the Sport challenge table if approved</description>
+        <internal_name>gvs_sport_challenge_proposal_flow</internal_name>
+        <label_cache>[{"name":"b318e314-8c96-40a1-ba3d-969aebafb704.subtype_indoor","label":"3 - Get Catalog Variables➛subtype_indoor","reference":"","reference_display":"subtype_indoor","type":"choice","base_type":"choice","choices":[{"label":"Climbing stairs","value":"climbing_stairs","order":100.0},{"label":"Pushup","value":"pushup","order":100.0}],"attributes":{"catalogType":"5","catalogTypeLabel":"Select Box"}},{"name":"b318e314-8c96-40a1-ba3d-969aebafb704.subtype_outdoor","label":"3 - Get Catalog Variables➛subtype_outdoor","reference":"","reference_display":"subtype_outdoor","type":"choice","base_type":"choice","choices":[{"label":"Cycling","value":"cycling","order":100.0},{"label":"Running","value":"running","order":100.0}],"attributes":{"catalogType":"5","catalogTypeLabel":"Select Box"}},{"name":"c20ac299-40ae-4938-815a-51ea4cbf7087.__dont_treat_as_error__","label":"4 - Create Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c20ac299-40ae-4938-815a-51ea4cbf7087.__action_status__","label":"4 - Create Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c20ac299-40ae-4938-815a-51ea4cbf7087.table_name","label":"4 - Create Record➛Sport Challenge Table","reference":"x_933235_gvs_sport_sport_chal","reference_display":"Sport Challenge","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c20ac299-40ae-4938-815a-51ea4cbf7087.record","label":"4 - Create Record➛Sport Challenge Record","reference":"x_933235_gvs_sport_sport_chal","reference_display":"Sport Challenge","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"{{static.74888d9097a7111010c67b771153af14}}","label":"Sport challenge approvers","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference"},{"name":"Service Catalog_1.request_item","label":"Trigger - Service Catalog➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","attributes":{"default_search_field":"number"}},{"name":"905f9e50-1019-4458-b853-514723b441c9.__dont_treat_as_error__","label":"1 - Ask For Approval➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"905f9e50-1019-4458-b853-514723b441c9.__action_status__","label":"1 - Ask For Approval➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"905f9e50-1019-4458-b853-514723b441c9.approval_state","label":"1 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"b318e314-8c96-40a1-ba3d-969aebafb704.name","label":"3 - Get Catalog Variables➛name","reference":"","reference_display":"name","type":"string","base_type":"string","attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"b318e314-8c96-40a1-ba3d-969aebafb704.type","label":"3 - Get Catalog Variables➛type","reference":"","reference_display":"type","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":100.0},{"label":"Outdoor","value":"outdoor","order":100.0},{"label":"Indoor","value":"indoor","order":100.0}],"attributes":{"catalogType":"5","catalogTypeLabel":"Select Box"}},{"name":"b318e314-8c96-40a1-ba3d-969aebafb704.target","label":"3 - Get Catalog Variables➛target","reference":"","reference_display":"target","type":"string","base_type":"string","attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"Service Catalog_1.request_item.requested_for","label":"Trigger - Service Catalog➛Requested Item Record➛Requested for","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"requested_for"},{"name":"Service Catalog_1.request_item.requested_for.company","label":"Trigger - Service Catalog➛Requested Item Record➛Requested for➛Company","reference":"core_company","reference_display":"Company","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"company"},{"name":"6a4104f2-96ff-4203-a300-d1515372bac6.record","label":"7 - Create Record➛Sport Challenge Record","reference":"x_933235_gvs_sport_sport_chal","reference_display":"Sport Challenge","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6a4104f2-96ff-4203-a300-d1515372bac6.table_name","label":"7 - Create Record➛Sport Challenge Table","reference":"x_933235_gvs_sport_sport_chal","reference_display":"Sport Challenge","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6a4104f2-96ff-4203-a300-d1515372bac6.__action_status__","label":"7 - Create Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"6a4104f2-96ff-4203-a300-d1515372bac6.__dont_treat_as_error__","label":"7 - Create Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Service Catalog_1.request_item.opened_by","label":"Trigger - Service Catalog➛Requested Item Record➛Opened by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"opened_by"},{"name":"Service Catalog_1.request_item.opened_by.company","label":"Trigger - Service Catalog➛Requested Item Record➛Opened by➛Company","reference":"core_company","reference_display":"Company","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"company"},{"name":"2064553b-d7e4-4b9f-876d-cd9e054a35cd.record","label":"7 - Create Record➛Sport Challenge Record","reference":"x_933235_gvs_sport_sport_chal","reference_display":"Sport Challenge","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2064553b-d7e4-4b9f-876d-cd9e054a35cd.table_name","label":"7 - Create Record➛Sport Challenge Table","reference":"x_933235_gvs_sport_sport_chal","reference_display":"Sport Challenge","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2064553b-d7e4-4b9f-876d-cd9e054a35cd.__action_status__","label":"7 - Create Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"2064553b-d7e4-4b9f-876d-cd9e054a35cd.__dont_treat_as_error__","label":"7 - Create Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"66f0d4a7-a547-41d8-8eef-945d071bfdb3.record","label":"6 - Update Record➛Sport Challenge Record","reference":"x_933235_gvs_sport_sport_chal","reference_display":"Sport Challenge","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"66f0d4a7-a547-41d8-8eef-945d071bfdb3.table_name","label":"6 - Update Record➛Sport Challenge Table","reference":"x_933235_gvs_sport_sport_chal","reference_display":"Sport Challenge","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"66f0d4a7-a547-41d8-8eef-945d071bfdb3.__action_status__","label":"6 - Update Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"66f0d4a7-a547-41d8-8eef-945d071bfdb3.__dont_treat_as_error__","label":"6 - Update Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"415be0dc-6ab1-47d5-af2e-69fd74655501.record","label":"8 - Update Record➛Sport Challenge Record","reference":"x_933235_gvs_sport_sport_chal","reference_display":"Sport Challenge","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"415be0dc-6ab1-47d5-af2e-69fd74655501.table_name","label":"8 - Update Record➛Sport Challenge Table","reference":"x_933235_gvs_sport_sport_chal","reference_display":"Sport Challenge","type":"table_name","base_type":"table_name","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"415be0dc-6ab1-47d5-af2e-69fd74655501.__action_status__","label":"8 - Update Record➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"415be0dc-6ab1-47d5-af2e-69fd74655501.__dont_treat_as_error__","label":"8 - Update Record➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"3ce44510-07ff-4d47-bccf-2ea1b3c015b7.__action_status__","label":"10 - Send Notification➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true"}},{"name":"3ce44510-07ff-4d47-bccf-2ea1b3c015b7.__dont_treat_as_error__","label":"10 - Send Notification➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true"}},{"name":"d3deffd3-b0bd-4b29-9cf4-32293ee822c6.email","label":"10 - Send Email➛email","reference":"sys_email","reference_display":"Email","type":"reference","base_type":"reference","attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d3deffd3-b0bd-4b29-9cf4-32293ee822c6.__action_status__","label":"10 - Send Email➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"d3deffd3-b0bd-4b29-9cf4-32293ee822c6.__dont_treat_as_error__","label":"10 - Send Email➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Service Catalog_1.request_item.opened_by.email","label":"Trigger - Service Catalog➛Requested Item Record➛Opened by➛Email","reference":"","reference_display":"Email","type":"email","base_type":"email","parent_table_name":"sys_user","column_name":"email"},{"name":"Service Catalog_1.request_item.opened_by.first_name","label":"Trigger - Service Catalog➛Requested Item Record➛Opened by➛First name","reference":"","reference_display":"First name","type":"string","base_type":"string","parent_table_name":"sys_user","column_name":"first_name"},{"name":"9400c296-2738-4062-84c3-45341ce0dcef.__action_status__","label":"11 - Log➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"9400c296-2738-4062-84c3-45341ce0dcef.__dont_treat_as_error__","label":"11 - Log➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Service Catalog_1.request_item.request","label":"Trigger - Service Catalog➛Requested Item Record➛Request","reference":"sc_request","reference_display":"Request","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"request"}]</label_cache>
+        <master>true</master>
+        <name>GVS_Sport Challenge proposal flow</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="GVS_SPORT Challenge proposal flow">8ef6dd5097e7111010c67b771153af92</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3c99919497e7111010c67b771153af38</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:32</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=3c99919497e7111010c67b771153af38"/>
+    <sys_variable_value action="delete_multiple" query="document_key=3c99919497e7111010c67b771153af38"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=3c99919497e7111010c67b771153af38^sys_idNOT IN4d99919497e7111010c67b771153af96"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment>Sport Challenge proposed</comment>
+        <display_text/>
+        <flow display_value="GVS_Sport Challenge proposal flow">3c99919497e7111010c67b771153af38</flow>
+        <name>Service Catalog</name>
+        <remote_sys_id/>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:51</sys_created_on>
+        <sys_id>4d99919497e7111010c67b771153af96</sys_id>
+        <sys_mod_count>48</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:34</sys_updated_on>
+        <trigger_definition display_value="Service Catalog">c43a1011c36813002841b63b12d3ae15</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>service_catalog</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=4d99919497e7111010c67b771153af96"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=3c99919497e7111010c67b771153af38^sys_idNOT IN1c610e20972b511010c67b771153afef,4d5a352897e7511010c67b771153af09,93dbb1a897e7511010c67b771153afff,cd5a352897e7511010c67b771153af09"/>
+    <sys_hub_flow_stage action="INSERT_OR_UPDATE">
+        <always_show>true</always_show>
+        <ancestor_array_position>0</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id/>
+        <ancestral_if_else_logic/>
+        <component_indexes>9</component_indexes>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="GVS_Sport Challenge proposal flow">3c99919497e7111010c67b771153af38</flow>
+        <label>Challenge rejected</label>
+        <order>3</order>
+        <stage_id>73cf9cc4-f93d-4d08-8671-788141b1dcba</stage_id>
+        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 14:16:13</sys_created_on>
+        <sys_id>1c610e20972b511010c67b771153afef</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 15:39:35</sys_updated_on>
+        <type>standard</type>
+        <value>rejected</value>
+    </sys_hub_flow_stage>
+    <sys_hub_flow_stage action="INSERT_OR_UPDATE">
+        <always_show>true</always_show>
+        <ancestor_array_position>0</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id/>
+        <ancestral_if_else_logic/>
+        <component_indexes>2</component_indexes>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="GVS_Sport Challenge proposal flow">3c99919497e7111010c67b771153af38</flow>
+        <label>Challenge accepted</label>
+        <order>1</order>
+        <stage_id>37b0d98b-ea59-4da7-b0e6-27dfe372935a</stage_id>
+        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 13:45:25</sys_created_on>
+        <sys_id>4d5a352897e7511010c67b771153af09</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 15:52:41</sys_updated_on>
+        <type>standard</type>
+        <value>accepted</value>
+    </sys_hub_flow_stage>
+    <sys_hub_flow_stage action="INSERT_OR_UPDATE">
+        <always_show>true</always_show>
+        <ancestor_array_position>0</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id/>
+        <ancestral_if_else_logic/>
+        <component_indexes>10</component_indexes>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="GVS_Sport Challenge proposal flow">3c99919497e7111010c67b771153af38</flow>
+        <label>Completed</label>
+        <order>2</order>
+        <stage_id>9c964e1c-ff92-4de9-80a9-60aae5f4f6eb</stage_id>
+        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 13:52:08</sys_created_on>
+        <sys_id>93dbb1a897e7511010c67b771153afff</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 15:39:35</sys_updated_on>
+        <type>standard</type>
+        <value>completed</value>
+    </sys_hub_flow_stage>
+    <sys_hub_flow_stage action="INSERT_OR_UPDATE">
+        <always_show>true</always_show>
+        <ancestor_array_position>0</ancestor_array_position>
+        <ancestor_component_id/>
+        <ancestor_stage_id/>
+        <ancestral_if_else_logic/>
+        <component_indexes>0</component_indexes>
+        <duration>1970-01-01 00:00:00</duration>
+        <flow display_value="GVS_Sport Challenge proposal flow">3c99919497e7111010c67b771153af38</flow>
+        <label>Waiting for Challenge Approval</label>
+        <order>0</order>
+        <stage_id>14571bde-7959-4da7-b48b-025a7e819f2e</stage_id>
+        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 13:45:25</sys_created_on>
+        <sys_id>cd5a352897e7511010c67b771153af09</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 15:39:35</sys_updated_on>
+        <type>standard</type>
+        <value>approval</value>
+    </sys_hub_flow_stage>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=3c99919497e7111010c67b771153af38^sys_idNOT IN3499919497e7111010c67b771153af3a"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>3c99919497e7111010c67b771153af38</id>
+        <name>GVS_Sport Challenge proposal flow</name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:50</sys_created_on>
+        <sys_id>3499919497e7111010c67b771153af3a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:43:50</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=3499919497e7111010c67b771153af3a"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=3c99919497e7111010c67b771153af38^sys_idNOT IN7899919497e7111010c67b771153af3b,8599919497e7111010c67b771153af61"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>sc_req_item</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="GVS_Sport Challenge proposal flow">3c99919497e7111010c67b771153af38</model>
+        <model_id>3c99919497e7111010c67b771153af38</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_3c99919497e7111010c67b771153af38</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>true</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:50</sys_created_on>
+        <sys_id>7899919497e7111010c67b771153af3b</sys_id>
+        <sys_mod_count>30</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:32</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>request_item</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="Reference">reference</internal_type>
+        <label>Request Item</label>
+        <mandatory>true</mandatory>
+        <max_length>32</max_length>
+        <model display_value="GVS_Sport Challenge proposal flow">3c99919497e7111010c67b771153af38</model>
+        <model_id>3c99919497e7111010c67b771153af38</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_3c99919497e7111010c67b771153af38</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference display_value="" name="sc_req_item">sc_req_item</reference>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:50</sys_created_on>
+        <sys_id>8599919497e7111010c67b771153af61</sys_id>
+        <sys_mod_count>29</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:32</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="delete_multiple" query="model=3c99919497e7111010c67b771153af38"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=3c99919497e7111010c67b771153af38"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=3c99919497e7111010c67b771153af38^sys_idNOT IN4599919497e7111010c67b771153af95,4d99919497e7111010c67b771153af8d,69ed01209767511010c67b771153af38,79ed01209767511010c67b771153af42,aded01209767511010c67b771153af32,cd99919497e7111010c67b771153af84,dde58a64972b511010c67b771153af61"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <comment>New, filled record (no subtype)</comment>
+        <display_text/>
+        <flow display_value="GVS_Sport Challenge proposal flow">3c99919497e7111010c67b771153af38</flow>
+        <order>4</order>
+        <parent_ui_id>93436a94-ffcf-4c55-b48c-c2626b36133a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:51</sys_created_on>
+        <sys_id>4599919497e7111010c67b771153af95</sys_id>
+        <sys_mod_count>62</sys_mod_count>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:32</sys_updated_on>
+        <ui_id>c20ac299-40ae-4938-815a-51ea4cbf7087</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=4599919497e7111010c67b771153af95"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4599919497e7111010c67b771153af95</document_key>
+        <order>0</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:51</sys_created_on>
+        <sys_id>4999919497e7111010c67b771153af96</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:43:51</sys_updated_on>
+        <value>x_933235_gvs_sport_sport_chal</value>
+        <variable display_value="Table">61e05916c31332002841b63b12d3aee4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=4599919497e7111010c67b771153af95"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>4599919497e7111010c67b771153af95</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:51</sys_created_on>
+        <sys_id>0599919497e7111010c67b771153af96</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:43:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>4599919497e7111010c67b771153af95</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:51</sys_created_on>
+        <sys_id>c599919497e7111010c67b771153af96</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 15:03:56</sys_updated_on>
+        <table>var__m_sys_hub_action_input_2de05916c31332002841b63b12d3aee1</table>
+        <value>name={{b318e314-8c96-40a1-ba3d-969aebafb704.name}}^type={{b318e314-8c96-40a1-ba3d-969aebafb704.type}}^target={{b318e314-8c96-40a1-ba3d-969aebafb704.target}}^requested_by={{Service Catalog_1.request_item.opened_by}}^company={{Service Catalog_1.request_item.opened_by.company}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=4599919497e7111010c67b771153af95"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4599919497e7111010c67b771153af95"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
+        <action_type_parent display_value="Get Catalog Variables">22f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <comment>Use catalog variables to prefill a new Sport Challenge Record</comment>
+        <display_text/>
+        <flow display_value="GVS_Sport Challenge proposal flow">3c99919497e7111010c67b771153af38</flow>
+        <order>3</order>
+        <parent_ui_id>93436a94-ffcf-4c55-b48c-c2626b36133a</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:51</sys_created_on>
+        <sys_id>4d99919497e7111010c67b771153af8d</sys_id>
+        <sys_mod_count>62</sys_mod_count>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:32</sys_updated_on>
+        <ui_id>b318e314-8c96-40a1-ba3d-969aebafb704</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=4d99919497e7111010c67b771153af8d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4d99919497e7111010c67b771153af8d</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:51</sys_created_on>
+        <sys_id>4999919497e7111010c67b771153af8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:43:51</sys_updated_on>
+        <value>8c7b015497a7111010c67b771153af18</value>
+        <variable display_value="Template Catalog Items and Variable Sets">bb0ba3abc31013002841b63b12d3aef1</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>4d99919497e7111010c67b771153af8d</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:51</sys_created_on>
+        <sys_id>8599919497e7111010c67b771153af8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:43:51</sys_updated_on>
+        <value>8c5d8dd497a7111010c67b771153af5f:item_option_new,caddc51897a7111010c67b771153af66:item_option_new,3773559c97a7111010c67b771153afef:item_option_new,7fcf4d5897a7111010c67b771153af75:item_option_new,c5f4911097e7111010c67b771153afc0:item_option_new</value>
+        <variable display_value="Catalog Variables">7b0ba3abc31013002841b63b12d3aef7</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=4d99919497e7111010c67b771153af8d"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>catalog_variables</field>
+        <id>4d99919497e7111010c67b771153af8d</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:51</sys_created_on>
+        <sys_id>8d99919497e7111010c67b771153af8e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:43:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>requested_item</field>
+        <id>4d99919497e7111010c67b771153af8d</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:51</sys_created_on>
+        <sys_id>0599919497e7111010c67b771153af8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:43:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>template_catalog_item</field>
+        <id>4d99919497e7111010c67b771153af8d</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:51</sys_created_on>
+        <sys_id>4199919497e7111010c67b771153af8f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:43:51</sys_updated_on>
+        <table>var__m_sys_hub_action_input_330ba3abc31013002841b63b12d3aee8</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=4d99919497e7111010c67b771153af8d"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4d99919497e7111010c67b771153af8d"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <comment>subtype indoor</comment>
+        <display_text/>
+        <flow display_value="GVS_Sport Challenge proposal flow">3c99919497e7111010c67b771153af38</flow>
+        <order>8</order>
+        <parent_ui_id>114ad9fa-9166-43ea-8745-a1b280a91c27</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:18</sys_created_on>
+        <sys_id>69ed01209767511010c67b771153af38</sys_id>
+        <sys_mod_count>52</sys_mod_count>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:32</sys_updated_on>
+        <ui_id>415be0dc-6ab1-47d5-af2e-69fd74655501</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=69ed01209767511010c67b771153af38"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>69ed01209767511010c67b771153af38</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:18</sys_created_on>
+        <sys_id>a1ed01209767511010c67b771153af3a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 10:31:18</sys_updated_on>
+        <value>x_933235_gvs_sport_sport_chal</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=69ed01209767511010c67b771153af38"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>69ed01209767511010c67b771153af38</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:18</sys_created_on>
+        <sys_id>21ed01209767511010c67b771153af3a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 10:31:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{c20ac299-40ae-4938-815a-51ea4cbf7087.record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>69ed01209767511010c67b771153af38</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:18</sys_created_on>
+        <sys_id>a9ed01209767511010c67b771153af39</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 10:31:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>69ed01209767511010c67b771153af38</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:18</sys_created_on>
+        <sys_id>6ded01209767511010c67b771153af39</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>subtype={{b318e314-8c96-40a1-ba3d-969aebafb704.subtype_indoor}}^=</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=69ed01209767511010c67b771153af38"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=69ed01209767511010c67b771153af38"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Send Email">c1806bf4a70323008299b39f087901cb</action_type>
+        <action_type_parent display_value="Send Email">98c181d20b100300d97d8bf637673ab5</action_type_parent>
+        <comment>Inform User about Rejection</comment>
+        <display_text/>
+        <flow display_value="GVS_Sport Challenge proposal flow">3c99919497e7111010c67b771153af38</flow>
+        <order>10</order>
+        <parent_ui_id>9e8d7881-a7a7-44c1-a113-945443e2c578</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:18</sys_created_on>
+        <sys_id>79ed01209767511010c67b771153af42</sys_id>
+        <sys_mod_count>52</sys_mod_count>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:32</sys_updated_on>
+        <ui_id>d3deffd3-b0bd-4b29-9cf4-32293ee822c6</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=79ed01209767511010c67b771153af42"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>79ed01209767511010c67b771153af42</document_key>
+        <order>7</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:18</sys_created_on>
+        <sys_id>3ded01209767511010c67b771153af44</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 10:31:18</sys_updated_on>
+        <value/>
+        <variable display_value="Body">ad806bf4a70323008299b39f087901f2</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>79ed01209767511010c67b771153af42</document_key>
+        <order>6</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:18</sys_created_on>
+        <sys_id>fded01209767511010c67b771153af44</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 10:31:18</sys_updated_on>
+        <value>Proposed Sport Challenge rejected</value>
+        <variable display_value="Subject">5d806bf4a70323008299b39f087901ec</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=79ed01209767511010c67b771153af42"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_body</field>
+        <id>79ed01209767511010c67b771153af42</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:18</sys_created_on>
+        <sys_id>f5ed01209767511010c67b771153af44</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 10:31:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>&lt;p data-tinymcerootblock=""&gt;Hello &lt;span class="data_parent_pill" style="display: inline;" contenteditable="false" data-pillvalue="{{fd_transform:1ea53d0e-3c9a-487d-b520-6fc01612de67}}"&gt;&lt;span class="data_pill  accepts_transform_functions" tabindex="0" contenteditable="false" data-pillvalue="{{fd_transform:1ea53d0e-3c9a-487d-b520-6fc01612de67}}"&gt;&lt;span class="data-pill-content-container"&gt;&lt;span class="pills"&gt;&lt;span class="pill-text" data-for="ah_tooltipTop" data-tip="Trigger - Service Catalog &amp;gt; Requested Item Record &amp;gt; Opened by &amp;gt; First name"&gt;&lt;span class="pill-start"&gt;Trigger - Service Catalog&lt;/span&gt;&lt;span class="pill-arrow"&gt;&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;...&lt;span class="data-pill-label-caret"&gt;&lt;span class="data-pill-label-arrow"&gt;➛&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class="pill-end"&gt;First name&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;button id="transform_function_facade_1ea53d0e-3c9a-487d-b520-6fc01612de67" class="transform_function_facade no_transform_applied"&gt;&lt;span class="inline-script-icon"&gt;&lt;span style="display: none;"&gt;​&lt;/span&gt;&lt;/span&gt;&lt;/button&gt;&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;,&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;unfortunately your proposed Sport Challenge was rejected.&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;(This is an automated message.)&lt;/p&gt;
+&lt;p data-tinymcerootblock=""&gt;&amp;nbsp;&lt;/p&gt;</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_subject</field>
+        <id>79ed01209767511010c67b771153af42</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:18</sys_created_on>
+        <sys_id>b9ed01209767511010c67b771153af44</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 10:31:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>ah_to</field>
+        <id>79ed01209767511010c67b771153af42</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:18</sys_created_on>
+        <sys_id>35ed01209767511010c67b771153af44</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 10:31:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_c1806bf4a70323008299b39f087901cb</table>
+        <value>{{Service Catalog_1.request_item.opened_by.email}} </value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=79ed01209767511010c67b771153af42"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=79ed01209767511010c67b771153af42"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Update Record">f9d01dd2c31332002841b63b12d3aea1</action_type>
+        <action_type_parent display_value="Update Record">baf174c8c3c232002841b63b12d3aee4</action_type_parent>
+        <comment>subtype outdoor</comment>
+        <display_text/>
+        <flow display_value="GVS_Sport Challenge proposal flow">3c99919497e7111010c67b771153af38</flow>
+        <order>6</order>
+        <parent_ui_id>62b1c82a-a084-4be3-863b-552ee69e359b</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:18</sys_created_on>
+        <sys_id>aded01209767511010c67b771153af32</sys_id>
+        <sys_mod_count>52</sys_mod_count>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:32</sys_updated_on>
+        <ui_id>66f0d4a7-a547-41d8-8eef-945d071bfdb3</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=aded01209767511010c67b771153af32"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>aded01209767511010c67b771153af32</document_key>
+        <order>50</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:18</sys_created_on>
+        <sys_id>e5ed01209767511010c67b771153af34</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 10:31:18</sys_updated_on>
+        <value>x_933235_gvs_sport_sport_chal</value>
+        <variable display_value="Table">b5d01916c31332002841b63b12d3aec9</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=aded01209767511010c67b771153af32"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>aded01209767511010c67b771153af32</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:18</sys_created_on>
+        <sys_id>65ed01209767511010c67b771153af34</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 10:31:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>{{c20ac299-40ae-4938-815a-51ea4cbf7087.record}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table_name</field>
+        <id>aded01209767511010c67b771153af32</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:18</sys_created_on>
+        <sys_id>eded01209767511010c67b771153af33</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 10:31:18</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>values</field>
+        <id>aded01209767511010c67b771153af32</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:18</sys_created_on>
+        <sys_id>a1ed01209767511010c67b771153af34</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:32</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f9d01dd2c31332002841b63b12d3aea1</table>
+        <value>subtype={{b318e314-8c96-40a1-ba3d-969aebafb704.subtype_outdoor}}^=</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=aded01209767511010c67b771153af32"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=aded01209767511010c67b771153af32"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
+        <comment>Get Approval by Sport challenge approver</comment>
+        <display_text/>
+        <flow display_value="GVS_Sport Challenge proposal flow">3c99919497e7111010c67b771153af38</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:50</sys_created_on>
+        <sys_id>cd99919497e7111010c67b771153af84</sys_id>
+        <sys_mod_count>62</sys_mod_count>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:32</sys_updated_on>
+        <ui_id>905f9e50-1019-4458-b853-514723b441c9</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=cd99919497e7111010c67b771153af84"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>cd99919497e7111010c67b771153af84</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:50</sys_created_on>
+        <sys_id>0599919497e7111010c67b771153af88</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:43:50</sys_updated_on>
+        <value>sc_req_item</value>
+        <variable display_value="Table">bcf2e9920b10030085c083eb37673acc</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>cd99919497e7111010c67b771153af84</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:50</sys_created_on>
+        <sys_id>4199919497e7111010c67b771153af88</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:43:50</sys_updated_on>
+        <value/>
+        <variable display_value="Due Date">c5f2e9920b10030085c083eb37673af9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>cd99919497e7111010c67b771153af84</document_key>
+        <order>3</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:50</sys_created_on>
+        <sys_id>8d99919497e7111010c67b771153af87</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:43:50</sys_updated_on>
+        <value>approval_history</value>
+        <variable display_value="Journal Field">c1f2e9920b10030085c083eb37673ae3</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_instance</document>
+        <document_key>cd99919497e7111010c67b771153af84</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:50</sys_created_on>
+        <sys_id>c999919497e7111010c67b771153af87</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:43:50</sys_updated_on>
+        <value>approval</value>
+        <variable display_value="Approval Field">01f2e9920b10030085c083eb37673ad8</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=cd99919497e7111010c67b771153af84"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_conditions</field>
+        <id>cd99919497e7111010c67b771153af84</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:50</sys_created_on>
+        <sys_id>8599919497e7111010c67b771153af87</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:43:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>ApprovesRejectsAnyG[{{static.74888d9097a7111010c67b771153af14}}]</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>approval_field</field>
+        <id>cd99919497e7111010c67b771153af84</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:50</sys_created_on>
+        <sys_id>8999919497e7111010c67b771153af86</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:43:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>due_date</field>
+        <id>cd99919497e7111010c67b771153af84</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:50</sys_created_on>
+        <sys_id>c199919497e7111010c67b771153af87</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:43:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{"action":"none","date_type":"actual","date":"{{}}","duration":1,"duration_type":"days","schedule":"","schedule_label":""}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>journal_field</field>
+        <id>cd99919497e7111010c67b771153af84</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:50</sys_created_on>
+        <sys_id>4d99919497e7111010c67b771153af86</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:43:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>record</field>
+        <id>cd99919497e7111010c67b771153af84</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:50</sys_created_on>
+        <sys_id>0199919497e7111010c67b771153af87</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:43:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value>{{Service Catalog_1.request_item}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>table</field>
+        <id>cd99919497e7111010c67b771153af84</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:50</sys_created_on>
+        <sys_id>4999919497e7111010c67b771153af87</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:43:50</sys_updated_on>
+        <table>var__m_sys_hub_action_input_f8f2e9920b10030085c083eb37673abd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=cd99919497e7111010c67b771153af84"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=cd99919497e7111010c67b771153af84"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="Log">5bc1bcc6531003003bf1d9109ec587d4</action_type>
+        <action_type_parent display_value="Log">0e0ae8c2531003003bf1d9109ec587c8</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="GVS_Sport Challenge proposal flow">3c99919497e7111010c67b771153af38</flow>
+        <order>11</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 14:35:56</sys_created_on>
+        <sys_id>dde58a64972b511010c67b771153af61</sys_id>
+        <sys_mod_count>36</sys_mod_count>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:32</sys_updated_on>
+        <ui_id>9400c296-2738-4062-84c3-45341ce0dcef</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=dde58a64972b511010c67b771153af61"/>
+    <sys_element_mapping action="delete_multiple" query="id=dde58a64972b511010c67b771153af61"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>log_message</field>
+        <id>dde58a64972b511010c67b771153af61</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 14:35:56</sys_created_on>
+        <sys_id>9de58a64972b511010c67b771153af62</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 14:35:56</sys_updated_on>
+        <table>var__m_sys_hub_action_input_5bc1bcc6531003003bf1d9109ec587d4</table>
+        <value>Processing of request {{Service Catalog_1.request_item.request}} finished.</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=dde58a64972b511010c67b771153af61"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=dde58a64972b511010c67b771153af61"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=3c99919497e7111010c67b771153af38"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=3c99919497e7111010c67b771153af38^sys_idNOT INa590306497e3511010c67b771153afed,a990306497e3511010c67b771153afea,c599919497e7111010c67b771153af79,e590306497e3511010c67b771153afe6"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">f7acac2097e3511010c67b771153af78</block>
+        <comment/>
+        <connected_to>93436a94-ffcf-4c55-b48c-c2626b36133a</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="GVS_Sport Challenge proposal flow">3c99919497e7111010c67b771153af38</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>9</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 08:23:14</sys_created_on>
+        <sys_id>a590306497e3511010c67b771153afed</sys_id>
+        <sys_mod_count>32</sys_mod_count>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:32</sys_updated_on>
+        <ui_id>9e8d7881-a7a7-44c1-a113-945443e2c578</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=a590306497e3511010c67b771153afed"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=a590306497e3511010c67b771153afed"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=a590306497e3511010c67b771153afed"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">e3acac2097e3511010c67b771153af70</block>
+        <comment>Type is Indoor</comment>
+        <connected_to>62b1c82a-a084-4be3-863b-552ee69e359b</connected_to>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="GVS_Sport Challenge proposal flow">3c99919497e7111010c67b771153af38</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>93436a94-ffcf-4c55-b48c-c2626b36133a</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 08:23:14</sys_created_on>
+        <sys_id>a990306497e3511010c67b771153afea</sys_id>
+        <sys_mod_count>32</sys_mod_count>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:32</sys_updated_on>
+        <ui_id>114ad9fa-9166-43ea-8745-a1b280a91c27</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=a990306497e3511010c67b771153afea"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=a990306497e3511010c67b771153afea"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=a990306497e3511010c67b771153afea"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">fb38d51497e7111010c67b771153afda</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="GVS_Sport Challenge proposal flow">3c99919497e7111010c67b771153af38</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>2</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:50</sys_created_on>
+        <sys_id>c599919497e7111010c67b771153af79</sys_id>
+        <sys_mod_count>32</sys_mod_count>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:32</sys_updated_on>
+        <ui_id>93436a94-ffcf-4c55-b48c-c2626b36133a</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=c599919497e7111010c67b771153af79"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>c599919497e7111010c67b771153af79</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:50</sys_created_on>
+        <sys_id>c599919497e7111010c67b771153af7d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 14:44:15</sys_updated_on>
+        <value>Challenge Approved</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=c599919497e7111010c67b771153af79"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>c599919497e7111010c67b771153af79</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:50</sys_created_on>
+        <sys_id>4599919497e7111010c67b771153af7d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:43:50</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{905f9e50-1019-4458-b853-514723b441c9.approval_state}}=approved</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>c599919497e7111010c67b771153af79</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:50</sys_created_on>
+        <sys_id>8199919497e7111010c67b771153af7d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:43:50</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=c599919497e7111010c67b771153af79"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=c599919497e7111010c67b771153af79"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">6facac2097e3511010c67b771153af68</block>
+        <comment>add subtype</comment>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="GVS_Sport Challenge proposal flow">3c99919497e7111010c67b771153af38</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <inputs/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id>93436a94-ffcf-4c55-b48c-c2626b36133a</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 08:23:14</sys_created_on>
+        <sys_id>e590306497e3511010c67b771153afe6</sys_id>
+        <sys_mod_count>32</sys_mod_count>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 09:33:32</sys_updated_on>
+        <ui_id>62b1c82a-a084-4be3-863b-552ee69e359b</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=e590306497e3511010c67b771153afe6"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>e590306497e3511010c67b771153afe6</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 08:23:14</sys_created_on>
+        <sys_id>ad90306497e3511010c67b771153afe9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 08:23:14</sys_updated_on>
+        <value>If Type is Outdoor</value>
+        <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=e590306497e3511010c67b771153afe6"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition</field>
+        <id>e590306497e3511010c67b771153afe6</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 08:23:14</sys_created_on>
+        <sys_id>2d90306497e3511010c67b771153afe9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 08:23:14</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value>{{b318e314-8c96-40a1-ba3d-969aebafb704.type}}=outdoor</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>condition_name</field>
+        <id>e590306497e3511010c67b771153afe6</id>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 08:23:14</sys_created_on>
+        <sys_id>6990306497e3511010c67b771153afe9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 08:23:14</sys_updated_on>
+        <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=e590306497e3511010c67b771153afe6"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=e590306497e3511010c67b771153afe6"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=3c99919497e7111010c67b771153af38^sys_idNOT IN86ed01209767511010c67b771153afa0"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>3c99919497e7111010c67b771153af38</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{Service Catalog_1.request_item.opened_by.first_name}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-30 10:31:19</sys_created_on>
+        <sys_id>86ed01209767511010c67b771153afa0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-30 10:31:19</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>1ea53d0e-3c9a-487d-b520-6fc01612de67</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=3c99919497e7111010c67b771153af38"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_3c99919497e7111010c67b771153af38^sys_idNOT IN0d99919497e7111010c67b771153af65,7c99919497e7111010c67b771153af5d"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>request_item</element>
+        <help/>
+        <hint/>
+        <label>Request Item</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_3c99919497e7111010c67b771153af38</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:50</sys_created_on>
+        <sys_id>0d99919497e7111010c67b771153af65</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:43:50</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_3c99919497e7111010c67b771153af38</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-29 16:43:50</sys_created_on>
+        <sys_id>7c99919497e7111010c67b771153af5d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-29 16:43:50</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_3c99919497e7111010c67b771153af38"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_3c99919497e7111010c67b771153af38"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_3c99919497e7111010c67b771153af38"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>8ef6dd5097e7111010c67b771153af92</sys_id>
+        <latest_snapshot>3c99919497e7111010c67b771153af38</latest_snapshot>
+        <compiler_build>glide-tokyo-07-08-2022__patch1-09-01-2022_09-16-2022_1610.zip</compiler_build>
+    </sys_hub_flow>
+</record_update>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="pa_dashboards_permissions">
+    <pa_dashboards_permissions action="INSERT_OR_UPDATE">
+        <dashboard display_value="Sport Challenges">5d6bebe09733111010c67b771153afdc</dashboard>
+        <delete>false</delete>
+        <group/>
+        <identity>x_933235_gvs_sport.user</identity>
+        <read>true</read>
+        <role display_value="x_933235_gvs_sport.user" name="x_933235_gvs_sport.user">efee09a99787111010c67b771153af04</role>
+        <sys_class_name>pa_dashboards_permissions</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-12-13 09:29:00</sys_created_on>
+        <sys_id>045cbba09773111010c67b771153af8f</sys_id>
+        <sys_name>x_933235_gvs_sport.user</sys_name>
+        <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_update_name>pa_dashboards_permissions_045cbba09773111010c67b771153af8f</sys_update_name>
+        <type>1</type>
+        <user/>
+        <write>false</write>
+    </pa_dashboards_permissions>
+</record_update>

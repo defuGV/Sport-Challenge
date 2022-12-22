@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="DELETE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Field state on the sport challenge table is colored and highlighted based on the current state:&#13;
+New - without color&#13;
+In progress - yellow&#13;
+Completed - green&#13;
+Not reached - red</description>
+        <field>state</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>GVS_SPORT Challenge states field colors</name>
+        <order/>
+        <script><![CDATA[// field coloring
+function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (newValue === '') {
+        return;
+    }
+
+    if (newValue === 'completed') {
+        control.style.backgroundColor = '#90ee90';
+        return;
+    }
+
+    if (newValue === 'in_progress') {
+        control.style.backgroundColor = 'yellow';
+        return;
+    }
+
+    if (newValue === 'not_reached') {
+        control.style.backgroundColor = '#FF6347';
+        return;
+    }
+
+    control.style.backgroundColor = '';
+	}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-12-01 11:36:08</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5956e23c97a3111010c67b771153af26</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>GVS_SPORT Challenge states field colors</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_update_name>sys_script_client_5956e23c97a3111010c67b771153af26</sys_update_name>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 11:36:08</sys_updated_on>
+        <table>x_933235_gvs_sport_sport_chal</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</application>
+        <file_path/>
+        <instance_id>8efa0428dbe3c0542f68c597059619e5</instance_id>
+        <instance_name>dev102758</instance_name>
+        <name>sys_script_client_5956e23c97a3111010c67b771153af26</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script_client"&gt;&lt;sys_script_client action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;applies_extended&gt;false&lt;/applies_extended&gt;&lt;condition/&gt;&lt;description&gt;Field state on the sport challenge table is colored and highlighted based on the current state:&amp;#13;
+New - without color&amp;#13;
+In progress - yellow&amp;#13;
+Completed - green&amp;#13;
+Not reached - red&lt;/description&gt;&lt;field&gt;state&lt;/field&gt;&lt;global&gt;true&lt;/global&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;messages/&gt;&lt;name&gt;GVS_SPORT Challenge states field colors&lt;/name&gt;&lt;order/&gt;&lt;script&gt;&lt;![CDATA[// field coloring
+function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+    if (newValue === '') {
+        return;
+    }
+
+    if (newValue === 'completed') {
+        control.style.backgroundColor = '#90ee90';
+        return;
+    }
+
+    if (newValue === 'in_progress') {
+        control.style.backgroundColor = 'yellow';
+        return;
+    }
+
+    if (newValue === 'not_reached') {
+        control.style.backgroundColor = '#FF6347';
+        return;
+    }
+
+    control.style.backgroundColor = '';
+	}]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script_client&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_gv_dluo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-12-01 11:36:08&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;5956e23c97a3111010c67b771153af26&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;GVS_SPORT Challenge states field colors&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport"&gt;6f13f8ed97c3111010c67b771153afd9&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="[GVS] Sport Challenge"&gt;6f13f8ed97c3111010c67b771153afd9&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_client_5956e23c97a3111010c67b771153af26&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin_gv_dluo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-12-01 11:36:08&lt;/sys_updated_on&gt;&lt;table&gt;x_933235_gvs_sport_sport_chal&lt;/table&gt;&lt;type&gt;onChange&lt;/type&gt;&lt;ui_type&gt;0&lt;/ui_type&gt;&lt;view/&gt;&lt;/sys_script_client&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-441410481</payload_hash>
+        <record_name>GVS_SPORT Challenge states field colors</record_name>
+        <reverted_from/>
+        <source>8e6838a19747111010c67b771153af99</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-12-01 11:36:08</sys_created_on>
+        <sys_id>5d56e23c97a3111010c67b771153af29</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>184cd78fb230000001</sys_recorded_at>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-01 11:36:08</sys_updated_on>
+        <type>Client Script</type>
+        <update_guid>9556e23cc0a31110b8e0b022a1173329</update_guid>
+        <update_guid_history>9556e23cc0a31110b8e0b022a1173329:-441410481</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-12-01 11:36:55</sys_created_on>
+        <sys_db_object display_value="" name="sys_script_client">sys_script_client</sys_db_object>
+        <sys_id>9965067acb904bc69259e52d49156e64</sys_id>
+        <sys_metadata>5956e23c97a3111010c67b771153af26</sys_metadata>
+        <sys_name>GVS_SPORT Challenge states field colors</sys_name>
+        <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
+        <sys_parent display_value="Sport Challenge">9e03d1f99707511010c67b771153affe</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_scope_delete display_value="">710c3a9091534670bb75d6ef5a6d2069</sys_scope_delete>
+        <sys_update_name>sys_script_client_5956e23c97a3111010c67b771153af26</sys_update_name>
+        <sys_update_version display_value="sys_script_client_5956e23c97a3111010c67b771153af26">5d56e23c97a3111010c67b771153af29</sys_update_version>
+    </sys_metadata_delete>
+</record_update>

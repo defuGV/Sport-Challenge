@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_filter_option_dynamic">
+    <sys_filter_option_dynamic action="DELETE">
+        <active>true</active>
+        <available_for_default>true</available_for_default>
+        <available_for_filter>false</available_for_filter>
+        <available_for_ref_qual>false</available_for_ref_qual>
+        <field_type display_value="Reference">52a227c1bf3320001875647fcf07396a</field_type>
+        <filter_by_schedule/>
+        <label>Test Get Company ID</label>
+        <order>100</order>
+        <roles/>
+        <script>var currentUser = gs.getUser();  gs.info(currentUser.getCompanyID());</script>
+        <script_reference_id/>
+        <script_reference_table/>
+        <sys_class_name>sys_filter_option_dynamic</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-11 11:31:54</sys_created_on>
+        <sys_id>0f55efde9707511010c67b771153afa9</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Test Get Company ID</sys_name>
+        <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_update_name>sys_filter_option_dynamic_0f55efde9707511010c67b771153afa9</sys_update_name>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-11 13:37:05</sys_updated_on>
+        <table>x_933235_gvs_sport_sport_chal</table>
+        <table_containing_filter/>
+    </sys_filter_option_dynamic>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</application>
+        <file_path/>
+        <instance_id>8efa0428dbe3c0542f68c597059619e5</instance_id>
+        <instance_name>dev102758</instance_name>
+        <name>sys_filter_option_dynamic_0f55efde9707511010c67b771153afa9</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_filter_option_dynamic"><sys_filter_option_dynamic action="INSERT_OR_UPDATE"><active>true</active><available_for_default>true</available_for_default><available_for_filter>false</available_for_filter><available_for_ref_qual>false</available_for_ref_qual><field_type display_value="Reference">52a227c1bf3320001875647fcf07396a</field_type><filter_by_schedule/><label>Test Get Company ID</label><order>100</order><roles/><script>var currentUser = gs.getUser();  gs.info(currentUser.getCompanyID());</script><script_reference_id/><script_reference_table/><sys_class_name>sys_filter_option_dynamic</sys_class_name><sys_created_by>admin_gv_dluo</sys_created_by><sys_created_on>2022-11-11 11:31:54</sys_created_on><sys_id>0f55efde9707511010c67b771153afa9</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Test Get Company ID</sys_name><sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package><sys_policy/><sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope><sys_update_name>sys_filter_option_dynamic_0f55efde9707511010c67b771153afa9</sys_update_name><sys_updated_by>admin_gv_dluo</sys_updated_by><sys_updated_on>2022-11-11 13:37:05</sys_updated_on><table>x_933235_gvs_sport_sport_chal</table><table_containing_filter/></sys_filter_option_dynamic></record_update>]]></payload>
+        <payload_hash>-1507001412</payload_hash>
+        <record_name>Test Get Company ID</record_name>
+        <reverted_from/>
+        <source>edb73b9e9747511010c67b771153af3c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-11 13:37:05</sys_created_on>
+        <sys_id>c632ccea9787511010c67b771153af5e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18466e885280000001</sys_recorded_at>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-11 13:37:05</sys_updated_on>
+        <type>Dynamic Filter Options</type>
+        <update_guid>3132cceaf2875110bdd246f5bb138d5e</update_guid>
+        <update_guid_history>3132cceaf2875110bdd246f5bb138d5e:-1507001412,5e162f12a84751109171ac9c18fec943:1713161261,4895a3122e4751106cada9ad59bf7e7f:1345938596</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-11 13:40:03</sys_created_on>
+        <sys_db_object display_value="" name="sys_filter_option_dynamic">sys_filter_option_dynamic</sys_db_object>
+        <sys_id>2f95ee75b14c40009337d17ca2400000</sys_id>
+        <sys_metadata>0f55efde9707511010c67b771153afa9</sys_metadata>
+        <sys_name>Test Get Company ID</sys_name>
+        <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
+        <sys_parent display_value="Sport Challenge">9e03d1f99707511010c67b771153affe</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_scope_delete display_value="">710c3a9091534670bb75d6ef5a6d2069</sys_scope_delete>
+        <sys_update_name>sys_filter_option_dynamic_0f55efde9707511010c67b771153afa9</sys_update_name>
+        <sys_update_version display_value="sys_filter_option_dynamic_0f55efde9707511010c67b771153afa9">c632ccea9787511010c67b771153af5e</sys_update_version>
+    </sys_metadata_delete>
+</record_update>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="9a5d31079723111010c67b771153af1d" extends="sys_import_set_row" label="Imp Tmpl X 933235 Gvs Sport Contribution" max_length="40" name="u_imp_tmpl_x_933235_gvs_sport_contribution" type="collection">
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Challenge" label="Challenge" max_length="32" name="u_challenge" type="string"/>
+        <element attributes="import_attribute_name=Contribution" label="Contribution" max_length="40" name="u_contribution" type="integer"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Date" label="Date" max_length="40" name="u_date" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Employee" label="Employee" max_length="40" name="u_employee" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=Sys ID" label="Sys ID" max_length="40" name="u_sys_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true,import_attribute_name=User" label="User" max_length="40" name="u_user" type="string"/>
+    </element>
+</database>

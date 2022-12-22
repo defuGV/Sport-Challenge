@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_hp_publisher">
+    <sys_ui_hp_publisher action="INSERT_OR_UPDATE">
+        <allow_database_view_filter>false</allow_database_view_filter>
+        <allow_extended_table>false</allow_extended_table>
+        <boolean_field/>
+        <boolean_table/>
+        <date_filter/>
+        <default_boolean_field/>
+        <default_choice/>
+        <default_date_filter/>
+        <default_reference_field_value/>
+        <description/>
+        <exclusion_choice_list/>
+        <look_up_name>GVS_SPORT Reference filter Challenge</look_up_name>
+        <name>Choose your challenge</name>
+        <reference_conditions/>
+        <reference_table>x_933235_gvs_sport_sport_chal</reference_table>
+        <remove_all_option>false</remove_all_option>
+        <source_field>name</source_field>
+        <source_table>x_933235_gvs_sport_sport_chal</source_table>
+        <sys_class_name>sys_ui_hp_publisher</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-12-13 08:26:15</sys_created_on>
+        <sys_id>90cdab249733111010c67b771153af21</sys_id>
+        <sys_name>Choose your challenge</sys_name>
+        <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_update_name>sys_ui_hp_publisher_90cdab249733111010c67b771153af21</sys_update_name>
+        <type>2</type>
+        <ui_control_type>2</ui_control_type>
+        <use_starts_with_on_search_keyword>false</use_starts_with_on_search_keyword>
+    </sys_ui_hp_publisher>
+</record_update>

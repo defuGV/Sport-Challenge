@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item">
+    <sc_cat_item action="DELETE">
+        <access_type>restricted</access_type>
+        <active>true</active>
+        <availability>on_desktop</availability>
+        <billable>false</billable>
+        <category/>
+        <checked_out/>
+        <cost>0</cost>
+        <custom_cart/>
+        <delivery_plan/>
+        <delivery_plan_script/>
+        <delivery_time>1970-01-03 00:00:00</delivery_time>
+        <description/>
+        <display_price_property>non_zero</display_price_property>
+        <entitlement_script/>
+        <flow_designer_flow display_value="GVS_SPORT Challenge proposal flow 2.0">ede86ebc97a3111010c67b771153af9f</flow_designer_flow>
+        <fulfillment_automation_level>unspecified</fulfillment_automation_level>
+        <group/>
+        <hide_sp>false</hide_sp>
+        <icon/>
+        <ignore_price>true</ignore_price>
+        <image/>
+        <location/>
+        <mandatory_attachment>false</mandatory_attachment>
+        <meta/>
+        <mobile_hide_price>false</mobile_hide_price>
+        <mobile_picture/>
+        <mobile_picture_type>use_desktop_picture</mobile_picture_type>
+        <model/>
+        <name>Copy of Request to participate in a Sport Challenge</name>
+        <no_attachment_v2>true</no_attachment_v2>
+        <no_cart>false</no_cart>
+        <no_cart_v2>true</no_cart_v2>
+        <no_delivery_time_v2>true</no_delivery_time_v2>
+        <no_order>false</no_order>
+        <no_order_now>false</no_order_now>
+        <no_proceed_checkout>false</no_proceed_checkout>
+        <no_quantity>true</no_quantity>
+        <no_quantity_v2>true</no_quantity_v2>
+        <no_search>false</no_search>
+        <no_wishlist_v2>false</no_wishlist_v2>
+        <omit_price>true</omit_price>
+        <order>0</order>
+        <ordered_item_link/>
+        <owner display_value="Defu Luo">b6ab05e59787111010c67b771153afe4</owner>
+        <picture/>
+        <preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=3f11ae4597b7111010c67b771153af11&amp;sysparm_preview=true", "summary");</preview>
+        <price>0</price>
+        <published_ref/>
+        <recurring_frequency/>
+        <recurring_price>0</recurring_price>
+        <request_method>submit</request_method>
+        <roles/>
+        <sc_catalogs/>
+        <sc_ic_item_staging/>
+        <sc_ic_version/>
+        <sc_template/>
+        <short_description>Copy of Want to participate in a sport challenge? Put in the request here!</short_description>
+        <show_variable_help_on_load>false</show_variable_help_on_load>
+        <start_closed>false</start_closed>
+        <state/>
+        <sys_class_name>sc_cat_item</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-12-14 16:07:33</sys_created_on>
+        <sys_id>3f11ae4597b7111010c67b771153af11</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Copy of Request to participate in a Sport Challenge</sys_name>
+        <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_update_name>sc_cat_item_3f11ae4597b7111010c67b771153af11</sys_update_name>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-14 16:07:53</sys_updated_on>
+        <taxonomy_topic/>
+        <template/>
+        <template_manager_roles/>
+        <type>item</type>
+        <use_sc_layout>true</use_sc_layout>
+        <vendor/>
+        <visible_bundle>true</visible_bundle>
+        <visible_guide>true</visible_guide>
+        <visible_standalone>true</visible_standalone>
+        <workflow/>
+    </sc_cat_item>
+    <sys_translated_text action="DELETE" query="documentkey=3f11ae4597b7111010c67b771153af11"/>
+    <fx_price action="DELETE" query="id=3f11ae4597b7111010c67b771153af11"/>
+    <fx_price action="DELETE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>price</field>
+        <id>3f11ae4597b7111010c67b771153af11</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-12-14 16:07:33</sys_created_on>
+        <sys_id>ff11ae4597b7111010c67b771153af12</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-14 16:07:34</sys_updated_on>
+        <table>sc_cat_item</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="DELETE">
+        <amount>0</amount>
+        <currency display_value="USD">USD</currency>
+        <field>recurring_price</field>
+        <id>3f11ae4597b7111010c67b771153af11</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="USD">USD</reference_currency>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-12-14 16:07:33</sys_created_on>
+        <sys_id>7b11ae4597b7111010c67b771153af13</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-14 16:07:34</sys_updated_on>
+        <table>sc_cat_item</table>
+        <type>calculated</type>
+    </fx_price>
+    <sys_attachment action="DELETE">
+        <average_image_color>#9f9091</average_image_color>
+        <chunk_size_bytes>700000</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/jpeg</content_type>
+        <file_name>picture</file_name>
+        <hash>9225dd14948170f62b0b085f5f208fe64919cfed08e5b18cd5763819c9319d46</hash>
+        <image_height>200</image_height>
+        <image_width>252</image_width>
+        <size_bytes>5999</size_bytes>
+        <size_compressed>5996</size_compressed>
+        <state>available</state>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-12-14 16:07:34</sys_created_on>
+        <sys_id>8c21ee8597b7111010c67b771153af31</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-14 16:07:34</sys_updated_on>
+        <table_name>ZZ_YYsc_cat_item</table_name>
+        <table_sys_id>3f11ae4597b7111010c67b771153af11</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="DELETE">
+        <data>H4sIAAAAAAAAAA==</data>
+        <length>16</length>
+        <position>0</position>
+        <sys_attachment display_value="picture" sys_id="8c21ee8597b7111010c67b771153af31">8c21ee8597b7111010c67b771153af31</sys_attachment>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-12-14 16:07:34</sys_created_on>
+        <sys_id>0821ee8597b7111010c67b771153af33</sys_id>
+    </sys_attachment_doc>
+    <sys_attachment_doc action="DELETE">
+        <data>hZdnUBPO1sZD7y2IIDVABOm9IyVAKCItIL0rEAEpoQvSmxBDlyK9G4pUQQJ/eolAaFKlKkivinQu971z532/vb/9sjvPnHOe3Z3ZnXM7e7sCoNWBakMBeHgAAN7dANwuAKIA5CSkDPeBTEAGBqY7gEwPHjAxMTM9oKMDMjH/e87ExMop/JCVXYCDiYlHlkdARExKSooZrKCiIKksLCklhkdJSUlLQ8sEBLJLcnJySspI/l+kJf9fbjsBdKSAQcAVAR4XAJ8Oj4AO77YXwHrnkQjv31b/Cz4Aj4CQiJiE9E5Vor1b4BMQERMSEhEQEgD+vSF8OgJOQqAYkaqhvRcxPVd4cqF4XdchyT3IuJFDxOoRt3cKw33HIrCE8V38A7z/8L/Z7+Lvst9JnHR4/xUJAAT/0ejwgQScYvSGXlyq9rfzAEqC/6lGB1AG/LbrhWTXd8ox8PpRx/2e1tDbLcdW3afNMIBtOWB4yTVhasnyoilRK7xRBd0BGmSQMBhEsfK4FB/IyW7cy20kTpvOCYH4ynUs0d0CdHsH838vbNt00iRHYEDpu//EWzrkiPp6rnZ940guLaLxm1GUt+1MGlCZnqQlsxGHPSonH551EakKQO1/RE/5NUEbZcSwhHgV97nV3HceP7kFlJ3Vh9rkNvnB0AalhtGoCqy761dBflG8Aq/mS3aFQu82D8e1OAnVfXjZMr2KJ41TiF0qiei5kC7NGoNicUcZ4hZADyDQI6xW5Hj1afQzsvxJM0HrbGYeReJOjZPZHxsl68Xl5Yv1NqkGL7Og3QB7KiHH3I2xJ47mcDDbtE1tXd2DhAGe/A/XjBKWTbrcAtb0Qy9PnzUHoRCviGS9brxVCcbkHPOu/ZkP4nHYIWs6Ui0j2qhay25SiEXJIx1fboTB/UotXYiPA3BqzriEJ2q7L4muad3U9e5w5vcS3GsM34btm6iqk0MFcfhhLZ4qrIkMlIo82Nx7AlBi+m5PoI7kw3SgzhiQNqlEF9LkmLvn7DIXXoZFOS7nlUGbSijWhVP0Ikik1nP0Pwd8SUfqeEhaLmYQi81ljvn69jJurcWzFPr9k8DC8McFVvv03evKx10jjla//nrEcxYbsPaPfD5M7z/Vt4Pds248yugx8nr7on4X1itVDVgQ9mZhGQR1EvuWs4ZotgyBU35kpmiLeOXT8cIQb15QOHiUnU3LCbQ5s7uu8ZtyKQxsYCUd7Yg/eVG5uDpnrGvAR+O7ySJF3aA39rxfdBcGAY/x7RjK3LZjn2W8s8MVvc2e3c0YveqXjwY+LCtA9D55Kh2wxDYYs35TEuD+odNMS5inGC8/ls+TeMn18y6VtARLOhIgn7NgxzN2mb9plDxzC5iX5bgFSMjjHy6rbFqYURLJ3+uT16W0A3fm6pWkegemvwJG5/fXRBXwW1XWo59xRRU+XSwU1EuEQID3+uK09ErUOaP5SL0rCbnhhljQ+sZMMb0UFlrBbFytl0BMX0Ym5CpNygDiFzWMyIDSY2mN0imB2qV8Rj1l+nx8hLUyV059dGo0WvQ0VX+TW2KkCc87Qrt/p2AUjmAM5gsaw4FcOUw9GuUrgq9VEZ1rNuy854DvTbg9tlBWBJNeWOY0nmhSyXOqn2aI1akb7EsRzrkamvusNe+4hH6W9K6xqwhjj6SD1aoCmkkFasTJR5x0R+B4o4dLKuFr8OXKUwpTqgREUaaXa48K3jKRGS2Xjz+upnU5D57RHjVMv9ZhB1Ko0izKPftCA5BDEbr4KvpSQ1yMaq46ZVXjx8gStOq32vgS7h35WO2xrg2t2IhHemwE/LVylEb2fS2YzTjDXBkE5fqjLwUe5LXLm8ZOO7qveg6fNvYlMvGPKLDv54rpMPL0ppVFYUmEIbAyfmhab3kauJqr3kUrDaszGBGnEygwIB90Vf5S1MTuOL6JftPmWbg+P3G7Lrmz7pI6uepQt+f9pgQKeY11duMxejTdBl9P8v2yqG3QT9VNezmyac/1nd7Qe66MezKNLT18MJdkpyeIJG7LDucPr2ymTcP8sOjcxjo9z8jljP0zMwIm975q+Inl+fJV5s4ZrlAT9k+cMq3CD0juDYtGbsV4LV3FDSONz9R2/4rJe1m5L4FsQdg/X0eylGsCKvplHvnVObr2dSo/tB4BaV2LKGsp9TFR2w/jYa02Inz8rEp7BuU6CrV+TXqONf5Oqju34xFXRThayzQebn5WEIgMsXpBp/skyxDlF/lQWq4GkXi4iun+NdvVglOj/2kfxLH6jPLGoVSt+NE6aqPiULNJ5pL/+8Z0a45NeZY8LaxWooYcpvM8TTQVmAwxqTjOLNOFoUkL9bLkxfJm0kGBBnXbBhiRwkgaI5JH9rJGvcfxtQbxeuQ+Ns+I1FVXTYlovUMkNgRJyofRscWuESESATrkIGPVwcjpct0lI6yGZpbS8wvHoe+MuJCy9+6UhpO3gHRj23Mby9+2qu9FSPdCuPzyQPiE35p31uFKP6uvLq6r/uCOhAd2B94oSnnnTszBf/ugfFGNnw5KLdsCjqTHFjZyxW8B9+aVfWf8QtYStL1a77MyPq1TENJpmEPVsNqwDky6JY0njyJsDpX4wLSSYVLpiD8Ntcsz+uVf88VPzm38561YtmDF0ULv7TezZ2PxbgEzpsDTsIm9QyKeBSPt744fbM4X3JQDG44EsVavU1YAKVbd7LNsFozh0TO/litO/uKy6zTCIuVDAkWcrmTnQvrJaiWyG9p6FDLdum4BdDkXM4mrQ1735hX1PF2dzz7YWVbaQifsXNWIkS4um4Q0KW/atYeTrs6Xp1bK01nLibzSJ4nTOHVgxURkcU+zBIfGoyDAfHGgCZoS8vw4y6Iugr2EgeH+lJHUTvrqZm6tdB1MugjnOi61IxPz6ymdIVNQEfajobGgjeVsM2scg4EJqyH5W2xVgjkMEt5k+DbugdGQOuvdfYQb1AnYJGAMorbGk2YTYWYDxl4xdaWjiszjvLMi+L0O1pbAi3LTKQROcFQYxXdqU3kWi9o/1Lc7+9gCY6NavgWgtU5s/OcWc/N7V+GRg8IYW8UFq4tfQR9wF3Pd9tFGY2xAlS0exqqmwmpKl7AxZhLicEAQUY8f4kXdtwbRACa1D/7O36rZHPQ5h4Xn9q0+W8vnD6KYDghuAbMHybayYrGP3uGFPDB+8iQg4rG6SO5WhKA/6WPT0OiblpDWfOR+726qJYu6LG3/FA0vyl+EoFCIYOQ1GnIs3DP1Nb407Xsb3wZN30xP5rmI1UtciOWk1dUviUN1Hr0UyVUdo7RS/vFovngdmJBLT1SqjoNJMWnaRGZaA+8z2ek1ZuKGgOb9j/bGIjwKkMLr5+jGNk3rMoTTzseDQM/cdvXHLPwi0j2nHWj9OPz7ZSzNiddu3GXrOV9hW2ydFSUMjHKxe9Jst4Aa+TkbpzHHRKmVeTd/wTOffGhLUHpLdOp5GNfF1rjO/FuMztTFD/2Th/RerBl2FSXuJgknSP0GLQfDRAiOgY6kajkH0W7LYPgWrWgM5efu+n1S2+te9NKRRYWDiqd5+ZyD2usW8E7ft7ruU3jaCk3chbC+qwJm3kRmFPR5qFxkCN3Y3cE6fh94wFnUlgV2Xvdb+udiu5mIuIF6jPBJ3o/hDe6fgGPT789ssOibBN6AfCP9bxZSz4JvZBqMWoOv432mgjsf//gJJxFLYmz/ix6RHrDfUWb6Bfu62FEY6CVqnvk1nGVfVzhfcGPR+/LJ8+PvV4pzVZR+oHhPOSYnNcKANWWTteCWmi2UuSU3IfaeuUa2pNUBAjn0xzRaA1e74Oaz4SxuUrXlbNIQtbhGLeT8RB699HDpkcP087n04C1nrd7zScYKRGmuBS6tdKhU88PDLHlMR4Drbr71ICfItO5ksASomwZaF2CHRr2LYQiETrzNDgips87ybh9bxGvTpAhE+yjArGuHvb84i4LCtjbdPjUsSj93mN8RZUMjtBFzmZ34rCsyI4nHlpR70aRwhBXZWUxr8N/ax66pj7GDU9sDZT+ad+7elVLDlKclKIbamlwZ9Lv5Kldi09gvRPNQq3laLWkbHVafWwDpnAGSDMi10K24fLp1Y36T1xU2kB0pbSqj/1aY+lAjvc48kI2qKc5RXLw4ewlfaDIiPbek97vcemfvaDNoFilpmn6jPuuYw2JwC/j5MfiEY9EHV/NkTy4OO975pVPYuaFKpFfuSjevxvN6RiNxXnLzm2seGd7PxDpxwpAXgTepQR/alRV+/Qrya7S/c4d0YY+g+5uQ1HPaHZmooCDXoqWULcDwWl+jhLhNtjEjySHwpalrT9qFfNjv8+nXrlokcWmQj4pSCi4kpVmGDMn+g5is79bDRqMfyYf6jAM9vlscwH6ZtHUmVY6wM5bWHAkfPaPZKO5di2TafiftAj6qx6VvvcY8kS8b1gKxgziMkfCxN9jjJrd2zeWP1/pJULZBAexMzF/hlahPhwK2oEuORRmfdvnD8+cQ9epXWzLrOZ0CphnaZKtwBfIlPJmfObhvFphpHzBkzI8QYdiGh5uzwHxTrARUfaBviRogvdEcETyvoIDpZK7adlFUtL3WeYfv9FWTrJ7NpLwNYXX6WczpHQLaqhd1IXjaLEX0FNI2Z2DsmGAzKeQ5xbGQcWi8rDh87dMe48LA70RI2+UAiqC+oZBobHLqsB5xuQWk1oQU+pjx11TKYnXd2sObzMGyxq9KMyTcB/ysf9ZIuCh+aVi8+jVm9pqoHxFy4btTecM3fLPNOtSTZndgJDbxqm1neNPFrxnNVxde7eVyJDcpwhLd2PynaHROsn7XM9gC9ClfoUal/vKti+bqH+uwPR9jAnA9S+Z3WYsVanTBq2+li39bO1+Zz/TKQesxQ5+XQ72LEJRomo9/qpSEUK+cZGW9iI3b147dpDl3PQUD4Sxd0XWajbMZncKuxWfRuMxnHPoQBiMGU9rRGUywz93PAwddopX/vuCVTKyFg5D9YFeHRNeFWqlvj8thUuLLawhm5cpODrh5S0hd7CBXgei4o1wiNUkQ8V6QSV6/WG+f7iitOnHjQCtpPYcpG7ctBXKPF84/WbXts1xC+Yn0PjCoJl9Z6hcLfDxeSnM7UClG6clj7Xp5xDfs7qVY084UnRkpRpZUnLsHZ9Jgek81PENuu1WRfWpIu5qScMjTt1omGZdCfukd7iViL7wEjV0EvmxfR+Rny9+P3DWkNFuaPLEkShEGh9xgeVeYQnV9eBifvjM3/0G7/M8ussnySm3RXEFUP3qU3V7BE8VRpZCao2z+rCvdtpCkOFw/6fCcLzfa70LX/9KavQ+voAvNL1HSEtSYTkvrH1VwaNSUmMkQ9/MsXxNgjOxuuRJxxDQ9VoWYRo5QMtifydwCKGg0ad/oNBw2xSB/g1A+N5wPVrL1iR4wQKt4L7TP+R69l+1VXVGLHavgc5x/zvTzI/CzbSxY1UWiKjTAvKWKB8K7yjvsvVHMfP2+t8dmZH3XVUuImtrP3V1sdTpUV3XRFm5vxv9P1oiDRyaJvpCP6aXIu54GTLcDnuSO3KfTIUFP6sFDkm7Vr6EFBntW3HMmI697RhJsyITQeoo0hKniY/IPWFLQj1Yf9BF8UkNENMMLBB85cxUf1mQRBhX4kiCxW66pthGa6QRcR+TfZH7RanSn6BPmcHtn8GFo7cpEGtGoV+7GvJRyFQ6Fj3K4DhttG9jnnQoB1MSj/KmRyU32m1lKAtSc5j0OrN0TPUQNAQ3h05DyXAVtjRzfmqAhZCJ0oQpqtOO9JMsfSye/HLVEAqgs/FJnk6GhzePvUuSa4goLo6va88HrFlqfvCqG/5BZ9xoIQoaltj2lrhxCNTwUruzBrFBtnhxftz6yoBzAqY0zKSN6Mn6C56oLmlp1PPfVcFoGst9pQido9hO/yNAsanl4LhNqNXd4ChfJQunlmOUaVf+QG1y7BaelLT3nyK2tiNyOKtvl8+h+OcArGeZ7/UJi0aTIu+UgotOazWyTPUG1FqSyeH1ejKheA1lsrNhcICXXqs0GWVS7EeMVoH1qZVEl+FwTnEW2Nf8AfqEzB1BfLshruxqvCxuJxaGohsxGXgSJTKClljYiu1eyDH+cegR1M61YkXKRCoGfxrO+alaISXpYMLqZ6+R44M24Upl1KO4wip1wvvTaKFnLbRBAkZVcegLHNwS/UFLjFxb1TzE+j4kE1MWsNm9YhVZUZ6wutABknRSbSFSlT76ZU7I6hn6mUfoiAKO5SZ/cly1TEESGVH3+qkLf8yZ766NgRiOHQCa9fdnBYfQ73wVBJIS+ITDI15olJxjjg6/tr7rZKNqGj16DQm8BSuXFvjnHptte1HMDES9ZHh7ImQ0oHt9n04scCYphbPDJ8qe8uDJgefzY18KtGyAexkwc3sy6K2lxzYES7jmVL2wbdOZc8999PB2tNCqehGOmaN1Y8VpRfB+IDJF3Hz4h8C1pOaRr92x71rDT1i/eyEGhrKWou+1RuYZ+Li4X0hR/QOpIKMmiV6voGDEkSb5DPdLYn40jZJB208bvWdjf/C3o/apYPpr+E4aMovTNKLf/cnbiSiDvxPEGR6ziC1I4RamCckpM2cj6zscQl+NuGqP6NZOZ3R+tHW9belos+S5PzIq/GkgED9613IZfpEBZJ1FUoskhNwlPS15bA4W8aqI8oBO8Wsht0TU7+LGRrTlHi5G23i3A/68evzyxgbBd/4EkZSjeRgmNDP0obfx7cV3ofvBUtWt8ktDXOIMxoDboWDovbjGOVgs+4091CrEoUeQsmpQI7YB/WGE285GWH2Ip2H+nw37s9OKLhYOm8V4FWYRjzAnZEwKgSoPDUW+e4xD9y0YrX64154BttBMxiO446sNdo+J9uhJVz/a6M4Hgqm2qqmaWBSUK7k0i+nLxURLZpdDVtPK0462bBPtf4rqoPIgF6U7R24WXeI74x3qpvZZZut+Nv6ozgTzku1Ad/Pu43Sar3vZDsiQlLl7DIY/VNmWNKCBFnAR4YVIjsMk1vafuwGtwQHGI4JGnSxglY7AE+Hv3cudpyMGRcYDdymR2Acu8jEw1dhMuKj0C8Plcr9hJ7zqgUau8C3e7ouCTJG5qLdqnAuWkVoKRAUdrNe9D88hz0BrxxG4i1HlWOsmonPity6iVyg/nn5JD7FSEuPoDrmke2sLdpQ3Lc/8Ky1mMe9qyam4lez+Tnt8DFNipLbvYRRJ2Yc/OdHVZflt1jM+LVMIwrwlqKcNI/Cap21fiGRUdps23s5il6jwqDXGBI57TO6vE+wDNHpLZIZOtSUIbqKFbt6IpQKtueYe/mD+HdUyzD7Qcu32SU2lu2ffgleSZGyWBexeVUHOmWIfWn/jrduOIpHVad0wW985ffnQdl9Z4aYNEt9N37qKMGEnFpwnWGKsHvGqiRmRTYM/jGdTyCHRXdIymsuOwxNewk1pib32IShPpcThY13zt/5tl/Cz5jUlb128U3zeKQ6oJpSh9oYvXAi/mSf+Ad2a8eTn2/dXzZwXo5c6Ik8sOua5FRiB7Sby2KbNIXpSEGD048OJep0z8bz1e4lWle6PPVVlStF3AHw9VWM6QhkwAa3BSPHJq2FPvpJ9XrxIc9Z5axYP+nwjnKYUIbT4wNUluo0JS65hapPplSQrQTYoXo2ahzes5/nK1TcL6gGif8rkVBaYkxcGHSWnEflYJePNKvKliwpVQrLA4SfshJl5CR7BLXId0a9qLEQ7/w17xtT82tl6bT90sG0k5qoXXNoq0ap7bU/sJKxCBV3ALelARgTOCxEYmX/e/RL3xt+zz1gdoPnR69+jqYXjZhQvh0eU3cIYA7EK3GkNCmi8nk/AHOgx1IE0u4F5Vwhhp85f72k55VE6sbLrj3jpNhWfrj730DyxJidA0zolk9RkOMSAvlobLe8m5K5RRDU3DwEWfsJHxBFUD2lDsGhl9W2IgOCUsx+iYWzBJc5uZbRrl4/CJuTEvOGRCm+927l9gkA/zbxcAAA==</data>
+        <length>7984</length>
+        <position>1</position>
+        <sys_attachment display_value="picture" sys_id="8c21ee8597b7111010c67b771153af31">8c21ee8597b7111010c67b771153af31</sys_attachment>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-12-14 16:07:34</sys_created_on>
+        <sys_id>8821ee8597b7111010c67b771153af33</sys_id>
+    </sys_attachment_doc>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</application>
+        <file_path/>
+        <instance_id>8efa0428dbe3c0542f68c597059619e5</instance_id>
+        <instance_name>dev102758</instance_name>
+        <name>sc_cat_item_3f11ae4597b7111010c67b771153af11</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item"><sc_cat_item action="INSERT_OR_UPDATE"><access_type>restricted</access_type><active>true</active><availability>on_desktop</availability><billable>false</billable><category/><checked_out/><cost>0</cost><custom_cart/><delivery_plan/><delivery_plan_script/><delivery_time>1970-01-03 00:00:00</delivery_time><description/><display_price_property>non_zero</display_price_property><entitlement_script/><flow_designer_flow display_value="GVS_SPORT Challenge proposal flow 2.0">ede86ebc97a3111010c67b771153af9f</flow_designer_flow><fulfillment_automation_level>unspecified</fulfillment_automation_level><group/><hide_sp>false</hide_sp><icon/><ignore_price>true</ignore_price><image/><location/><mandatory_attachment>false</mandatory_attachment><meta/><mobile_hide_price>false</mobile_hide_price><mobile_picture/><mobile_picture_type>use_desktop_picture</mobile_picture_type><model/><name>Copy of Request to participate in a Sport Challenge</name><no_attachment_v2>true</no_attachment_v2><no_cart>false</no_cart><no_cart_v2>true</no_cart_v2><no_delivery_time_v2>true</no_delivery_time_v2><no_order>false</no_order><no_order_now>false</no_order_now><no_proceed_checkout>false</no_proceed_checkout><no_quantity>true</no_quantity><no_quantity_v2>true</no_quantity_v2><no_search>false</no_search><no_wishlist_v2>false</no_wishlist_v2><omit_price>true</omit_price><order>0</order><ordered_item_link/><owner display_value="Defu Luo">b6ab05e59787111010c67b771153afe4</owner><picture/><preview>JavaScript: popupOpenStandard("com.glideapp.servicecatalog_cat_item_view.do?v=1&amp;sysparm_id=3f11ae4597b7111010c67b771153af11&amp;sysparm_preview=true", "summary");</preview><price>0</price><published_ref/><recurring_frequency/><recurring_price>0</recurring_price><request_method>submit</request_method><roles/><sc_catalogs/><sc_ic_item_staging/><sc_ic_version/><sc_template/><short_description>Copy of Want to participate in a sport challenge? Put in the request here!</short_description><show_variable_help_on_load>false</show_variable_help_on_load><start_closed>false</start_closed><state/><sys_class_name>sc_cat_item</sys_class_name><sys_created_by>admin_gv_dluo</sys_created_by><sys_created_on>2022-12-14 16:07:33</sys_created_on><sys_id>3f11ae4597b7111010c67b771153af11</sys_id><sys_mod_count>2</sys_mod_count><sys_name>Copy of Request to participate in a Sport Challenge</sys_name><sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package><sys_policy/><sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope><sys_update_name>sc_cat_item_3f11ae4597b7111010c67b771153af11</sys_update_name><sys_updated_by>admin_gv_dluo</sys_updated_by><sys_updated_on>2022-12-14 16:07:53</sys_updated_on><taxonomy_topic/><template/><template_manager_roles/><type>item</type><use_sc_layout>true</use_sc_layout><vendor/><visible_bundle>true</visible_bundle><visible_guide>true</visible_guide><visible_standalone>true</visible_standalone><workflow/></sc_cat_item><sys_translated_text action="delete_multiple" query="documentkey=3f11ae4597b7111010c67b771153af11"/><fx_price action="delete_multiple" query="id=3f11ae4597b7111010c67b771153af11"/><fx_price action="INSERT_OR_UPDATE"><amount>0</amount><currency display_value="USD">USD</currency><field>price</field><id>3f11ae4597b7111010c67b771153af11</id><parent/><reference_amount>0</reference_amount><reference_currency display_value="USD">USD</reference_currency><sys_created_by>admin_gv_dluo</sys_created_by><sys_created_on>2022-12-14 16:07:33</sys_created_on><sys_id>ff11ae4597b7111010c67b771153af12</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>admin_gv_dluo</sys_updated_by><sys_updated_on>2022-12-14 16:07:34</sys_updated_on><table>sc_cat_item</table><type>calculated</type></fx_price><fx_price action="INSERT_OR_UPDATE"><amount>0</amount><currency display_value="USD">USD</currency><field>recurring_price</field><id>3f11ae4597b7111010c67b771153af11</id><parent/><reference_amount>0</reference_amount><reference_currency display_value="USD">USD</reference_currency><sys_created_by>admin_gv_dluo</sys_created_by><sys_created_on>2022-12-14 16:07:33</sys_created_on><sys_id>7b11ae4597b7111010c67b771153af13</sys_id><sys_mod_count>1</sys_mod_count><sys_updated_by>admin_gv_dluo</sys_updated_by><sys_updated_on>2022-12-14 16:07:34</sys_updated_on><table>sc_cat_item</table><type>calculated</type></fx_price><sys_attachment action="INSERT_OR_UPDATE"><average_image_color>#9f9091</average_image_color><chunk_size_bytes>700000</chunk_size_bytes><compressed>true</compressed><content_type>image/jpeg</content_type><file_name>picture</file_name><hash>9225dd14948170f62b0b085f5f208fe64919cfed08e5b18cd5763819c9319d46</hash><image_height>200</image_height><image_width>252</image_width><size_bytes>5999</size_bytes><size_compressed>5996</size_compressed><state>available</state><sys_created_by>admin_gv_dluo</sys_created_by><sys_created_on>2022-12-14 16:07:34</sys_created_on><sys_id>8c21ee8597b7111010c67b771153af31</sys_id><sys_mod_count>0</sys_mod_count><sys_updated_by>admin_gv_dluo</sys_updated_by><sys_updated_on>2022-12-14 16:07:34</sys_updated_on><table_name>ZZ_YYsc_cat_item</table_name><table_sys_id>3f11ae4597b7111010c67b771153af11</table_sys_id></sys_attachment><sys_attachment_doc action="INSERT_OR_UPDATE"><data>H4sIAAAAAAAAAA==</data><length>16</length><position>0</position><sys_attachment display_value="picture" sys_id="8c21ee8597b7111010c67b771153af31">8c21ee8597b7111010c67b771153af31</sys_attachment><sys_created_by>admin_gv_dluo</sys_created_by><sys_created_on>2022-12-14 16:07:34</sys_created_on><sys_id>0821ee8597b7111010c67b771153af33</sys_id></sys_attachment_doc><sys_attachment_doc action="INSERT_OR_UPDATE"><data>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</data><length>7984</length><position>1</position><sys_attachment display_value="picture" sys_id="8c21ee8597b7111010c67b771153af31">8c21ee8597b7111010c67b771153af31</sys_attachment><sys_created_by>admin_gv_dluo</sys_created_by><sys_created_on>2022-12-14 16:07:34</sys_created_on><sys_id>8821ee8597b7111010c67b771153af33</sys_id></sys_attachment_doc></record_update>]]></payload>
+        <payload_hash>0</payload_hash>
+        <record_name>Copy of Request to participate in a Sport Challenge</record_name>
+        <reverted_from/>
+        <source>8e6838a19747111010c67b771153af99</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-12-14 16:07:53</sys_created_on>
+        <sys_id>3c3122c597b7111010c67b771153afcb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>185116472f00000001</sys_recorded_at>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-14 16:07:53</sys_updated_on>
+        <type>Catalog Item</type>
+        <update_guid>bc3122c539b711104e73498a323f07be</update_guid>
+        <update_guid_history>bc3122c539b711104e73498a323f07be:558624369,c021ee8529b71110bb1272324b8e143b:1976280601,4c21ee8584b71110088d237be45b2510:-25319877</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Copy of Request to participate in a Sport Challenge">f83122c597b7111010c67b771153afef</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-12-14 16:07:54</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item">sc_cat_item</sys_db_object>
+        <sys_id>58d4498bf69c42c8ad6aad0b8bc15d51</sys_id>
+        <sys_metadata>3f11ae4597b7111010c67b771153af11</sys_metadata>
+        <sys_name>Copy of Request to participate in a Sport Challenge</sys_name>
+        <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_scope_delete display_value="">710c3a9091534670bb75d6ef5a6d2069</sys_scope_delete>
+        <sys_update_name>sc_cat_item_3f11ae4597b7111010c67b771153af11</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_3f11ae4597b7111010c67b771153af11">3c3122c597b7111010c67b771153afcb</sys_update_version>
+    </sys_metadata_delete>
+</record_update>

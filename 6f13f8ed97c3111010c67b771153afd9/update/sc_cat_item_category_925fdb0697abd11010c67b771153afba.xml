@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Report issue with the Sport Challenge application">f09e130697abd11010c67b771153afde</sc_cat_item>
+        <sc_category display_value="Sport">739b819497a7111010c67b771153aff6</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-12-05 12:57:39</sys_created_on>
+        <sys_id>925fdb0697abd11010c67b771153afba</sys_id>
+        <sys_name>Sport.GVS_SPORT Sport Challenge incidents</sys_name>
+        <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_update_name>sc_cat_item_category_925fdb0697abd11010c67b771153afba</sys_update_name>
+    </sc_cat_item_category>
+</record_update>

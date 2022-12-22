@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_hp_reference">
+    <sys_ui_hp_reference action="INSERT_OR_UPDATE">
+        <publisher_reference display_value="Choose your challenge">90cdab249733111010c67b771153af21</publisher_reference>
+        <reference_field>challenge</reference_field>
+        <reference_table>x_933235_gvs_sport_contribution</reference_table>
+        <sys_class_name>sys_ui_hp_reference</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-12-13 09:25:30</sys_created_on>
+        <sys_id>b95b73ec9733111010c67b771153afd2</sys_id>
+        <sys_name>90cdab249733111010c67b771153af21</sys_name>
+        <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_update_name>sys_ui_hp_reference_b95b73ec9733111010c67b771153afd2</sys_update_name>
+    </sys_ui_hp_reference>
+</record_update>

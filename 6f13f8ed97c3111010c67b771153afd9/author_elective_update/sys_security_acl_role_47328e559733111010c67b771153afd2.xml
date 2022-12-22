@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="DELETE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-12-15 08:31:17</sys_created_on>
+        <sys_id>47328e559733111010c67b771153afd2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_933235_gvs_sport_sport_chal.x_933235_gvs_sport.user</sys_name>
+        <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_security_acl display_value="x_933235_gvs_sport_sport_chal">6582260997b7111010c67b771153afea</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_47328e559733111010c67b771153afd2</sys_update_name>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-15 08:31:17</sys_updated_on>
+        <sys_user_role display_value="x_933235_gvs_sport.user" name="x_933235_gvs_sport.user">efee09a99787111010c67b771153af04</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</application>
+        <file_path/>
+        <instance_id>8efa0428dbe3c0542f68c597059619e5</instance_id>
+        <instance_name>dev102758</instance_name>
+        <name>sys_security_acl_role_47328e559733111010c67b771153afd2</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role"><sys_security_acl_role action="INSERT_OR_UPDATE"><sys_class_name>sys_security_acl_role</sys_class_name><sys_created_by>admin_gv_dluo</sys_created_by><sys_created_on>2022-12-15 08:31:17</sys_created_on><sys_id>47328e559733111010c67b771153afd2</sys_id><sys_mod_count>0</sys_mod_count><sys_name>x_933235_gvs_sport_sport_chal.x_933235_gvs_sport.user</sys_name><sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package><sys_policy/><sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope><sys_security_acl display_value="x_933235_gvs_sport_sport_chal">6582260997b7111010c67b771153afea</sys_security_acl><sys_update_name>sys_security_acl_role_47328e559733111010c67b771153afd2</sys_update_name><sys_updated_by>admin_gv_dluo</sys_updated_by><sys_updated_on>2022-12-15 08:31:17</sys_updated_on><sys_user_role display_value="x_933235_gvs_sport.user" name="x_933235_gvs_sport.user">efee09a99787111010c67b771153af04</sys_user_role><transaction_id/></sys_security_acl_role></record_update>]]></payload>
+        <payload_hash>-1936997819</payload_hash>
+        <record_name>x_933235_gvs_sport_sport_chal.x_933235_gvs_sport.user</record_name>
+        <reverted_from/>
+        <source>8e6838a19747111010c67b771153af99</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-12-15 08:31:17</sys_created_on>
+        <sys_id>794242959733111010c67b771153afe0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18514e8c7930000001</sys_recorded_at>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-15 08:31:17</sys_updated_on>
+        <type>Access Roles</type>
+        <update_guid>b14242953b331110a63519e1000959e0</update_guid>
+        <update_guid_history>b14242953b331110a63519e1000959e0:-1936997819</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="x_933235_gvs_sport_sport_chal.x_933235_gvs_sport.user">f1e1aedd9773111010c67b771153af51</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-12-15 10:49:27</sys_created_on>
+        <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
+        <sys_id>2bb4e0be5200424487991a401d980464</sys_id>
+        <sys_metadata>47328e559733111010c67b771153afd2</sys_metadata>
+        <sys_name>x_933235_gvs_sport_sport_chal.x_933235_gvs_sport.user</sys_name>
+        <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
+        <sys_parent display_value="x_933235_gvs_sport_sport_chal">6582260997b7111010c67b771153afea</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_scope_delete display_value="">710c3a9091534670bb75d6ef5a6d2069</sys_scope_delete>
+        <sys_update_name>sys_security_acl_role_47328e559733111010c67b771153afd2</sys_update_name>
+        <sys_update_version display_value="sys_security_acl_role_47328e559733111010c67b771153afd2">794242959733111010c67b771153afe0</sys_update_version>
+    </sys_metadata_delete>
+</record_update>

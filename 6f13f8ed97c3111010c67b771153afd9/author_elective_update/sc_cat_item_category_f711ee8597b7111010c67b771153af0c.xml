@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category">
+    <sc_cat_item_category action="DELETE">
+        <sc_cat_item display_value="Copy of Request to participate in a Sport Challenge">3f11ae4597b7111010c67b771153af11</sc_cat_item>
+        <sc_category display_value="Sport">739b819497a7111010c67b771153aff6</sc_category>
+        <sys_class_name>sc_cat_item_category</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-12-14 16:07:33</sys_created_on>
+        <sys_id>f711ee8597b7111010c67b771153af0c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Sport.Copy of Request to participate in a Sport Challenge</sys_name>
+        <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_update_name>sc_cat_item_category_f711ee8597b7111010c67b771153af0c</sys_update_name>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-14 16:07:33</sys_updated_on>
+    </sc_cat_item_category>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</application>
+        <file_path/>
+        <instance_id>8efa0428dbe3c0542f68c597059619e5</instance_id>
+        <instance_name>dev102758</instance_name>
+        <name>sc_cat_item_category_f711ee8597b7111010c67b771153af0c</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_category"><sc_cat_item_category action="INSERT_OR_UPDATE"><sc_cat_item display_value="Copy of Request to participate in a Sport Challenge">3f11ae4597b7111010c67b771153af11</sc_cat_item><sc_category display_value="Sport">739b819497a7111010c67b771153aff6</sc_category><sys_class_name>sc_cat_item_category</sys_class_name><sys_created_by>admin_gv_dluo</sys_created_by><sys_created_on>2022-12-14 16:07:33</sys_created_on><sys_id>f711ee8597b7111010c67b771153af0c</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Sport.Copy of Request to participate in a Sport Challenge</sys_name><sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package><sys_policy/><sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope><sys_update_name>sc_cat_item_category_f711ee8597b7111010c67b771153af0c</sys_update_name><sys_updated_by>admin_gv_dluo</sys_updated_by><sys_updated_on>2022-12-14 16:07:33</sys_updated_on></sc_cat_item_category></record_update>]]></payload>
+        <payload_hash>-1909902577</payload_hash>
+        <record_name>Sport.Copy of Request to participate in a Sport Challenge</record_name>
+        <reverted_from/>
+        <source>8e6838a19747111010c67b771153af99</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-12-14 16:07:33</sys_created_on>
+        <sys_id>3711ee8597b7111010c67b771153af0f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>185116425270000001</sys_recorded_at>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-14 16:07:33</sys_updated_on>
+        <type>Catalog Item Category</type>
+        <update_guid>7f11ee8513b711102b0d4cb683151d0e</update_guid>
+        <update_guid_history>7f11ee8513b711102b0d4cb683151d0e:-1909902577</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="Sport.Copy of Request to participate in a Sport Challenge">303122c597b7111010c67b771153afba</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-12-14 16:07:53</sys_created_on>
+        <sys_db_object display_value="" name="sc_cat_item_category">sc_cat_item_category</sys_db_object>
+        <sys_id>11ce339851e24fd6a3102ccfa47185a4</sys_id>
+        <sys_metadata>f711ee8597b7111010c67b771153af0c</sys_metadata>
+        <sys_name>Sport.Copy of Request to participate in a Sport Challenge</sys_name>
+        <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_scope_delete display_value="">710c3a9091534670bb75d6ef5a6d2069</sys_scope_delete>
+        <sys_update_name>sc_cat_item_category_f711ee8597b7111010c67b771153af0c</sys_update_name>
+        <sys_update_version display_value="sc_cat_item_category_f711ee8597b7111010c67b771153af0c">3711ee8597b7111010c67b771153af0f</sys_update_version>
+    </sys_metadata_delete>
+</record_update>

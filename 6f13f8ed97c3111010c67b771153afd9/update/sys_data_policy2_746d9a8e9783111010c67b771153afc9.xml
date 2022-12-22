@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_data_policy2">
+    <sys_data_policy2 action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <apply_import_set>true</apply_import_set>
+        <apply_soap>true</apply_soap>
+        <conditions table="x_933235_gvs_sport_sport_chal">state=in_progress^EQ<item display_value="In progress" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="in_progress"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description>The fields "Type", "Subtype" and "Target" are mandatory in the Sport Challenge table when the state is "In progress"</description>
+        <enforce_ui>true</enforce_ui>
+        <inherit>false</inherit>
+        <model_id/>
+        <model_table>x_933235_gvs_sport_sport_chal</model_table>
+        <reverse_if_false>true</reverse_if_false>
+        <short_description>GVS_SPORT Mandatory fields when State is "In progress"</short_description>
+        <sys_class_name>sys_data_policy2</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-10 11:39:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>746d9a8e9783111010c67b771153afc9</sys_id>
+        <sys_name>GVS_SPORT Mandatory fields when State is "In progress"</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_update_name>sys_data_policy2_746d9a8e9783111010c67b771153afc9</sys_update_name>
+    </sys_data_policy2>
+</record_update>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_data_policy_rule">
+    <sys_data_policy_rule action="INSERT_OR_UPDATE">
+        <disabled>ignore</disabled>
+        <field>subtype</field>
+        <mandatory>true</mandatory>
+        <sys_class_name>sys_data_policy_rule</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-10 11:39:40</sys_created_on>
+        <sys_data_policy display_value="GVS_SPORT Mandatory fields when State is &quot;In progress&quot;">746d9a8e9783111010c67b771153afc9</sys_data_policy>
+        <sys_id>52bd1a8e9783111010c67b771153afe9</sys_id>
+        <sys_name>subtype</sys_name>
+        <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_update_name>sys_data_policy_rule_52bd1a8e9783111010c67b771153afe9</sys_update_name>
+        <table>x_933235_gvs_sport_sport_chal</table>
+    </sys_data_policy_rule>
+</record_update>

@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="DELETE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>true</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>false</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>x_933235_gvs_sport_contribution</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>GVS_SPORT Calculate Status (Delete)</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+  //calculates "Current status" when a new contribution record is deleted
+    var sum = 0;
+    var challengeGR = previous.challenge.getRefRecord();
+    var contributionGR = new GlideRecord('x_933235_gvs_sport_contribution');
+    contributionGR.addQuery('challenge', challengeGR.getUniqueValue());
+    contributionGR.query();
+
+    while (contributionGR.next()) {
+        //iterates through related contributions and sums their values
+		sum = sum + parseInt(contributionGR.getValue('contribution'), 10);
+    }
+
+    challengeGR.setValue('current_status', sum);
+    challengeGR.update();
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-16 13:44:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a8d37d849717111010c67b771153affb</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>GVS_SPORT Calculate Status (Delete)</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_update_name>sys_script_a8d37d849717111010c67b771153affb</sys_update_name>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-18 13:39:05</sys_updated_on>
+        <template/>
+        <when>after</when>
+    </sys_script>
+    <sys_translated_text action="DELETE" query="documentkey=a8d37d849717111010c67b771153affb"/>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</application>
+        <file_path/>
+        <instance_id>8efa0428dbe3c0542f68c597059619e5</instance_id>
+        <instance_name>dev102758</instance_name>
+        <name>sys_script_a8d37d849717111010c67b771153affb</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="global" table="sys_script"&gt;&lt;sys_script action="INSERT_OR_UPDATE"&gt;&lt;abort_action&gt;false&lt;/abort_action&gt;&lt;access&gt;package_private&lt;/access&gt;&lt;action_delete&gt;true&lt;/action_delete&gt;&lt;action_insert&gt;false&lt;/action_insert&gt;&lt;action_query&gt;false&lt;/action_query&gt;&lt;action_update&gt;false&lt;/action_update&gt;&lt;active&gt;false&lt;/active&gt;&lt;add_message&gt;false&lt;/add_message&gt;&lt;advanced&gt;true&lt;/advanced&gt;&lt;change_fields&gt;false&lt;/change_fields&gt;&lt;client_callable&gt;false&lt;/client_callable&gt;&lt;collection&gt;x_933235_gvs_sport_contribution&lt;/collection&gt;&lt;condition/&gt;&lt;description/&gt;&lt;execute_function&gt;false&lt;/execute_function&gt;&lt;filter_condition/&gt;&lt;is_rest&gt;false&lt;/is_rest&gt;&lt;message/&gt;&lt;name&gt;GVS_SPORT Calculate Status (Delete)&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;priority&gt;100&lt;/priority&gt;&lt;rest_method/&gt;&lt;rest_method_text/&gt;&lt;rest_service/&gt;&lt;rest_service_text/&gt;&lt;rest_variables/&gt;&lt;role_conditions/&gt;&lt;script&gt;&lt;![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+  //calculates "Current status" when a new contribution record is deleted
+    var sum = 0;
+    var challengeGR = previous.challenge.getRefRecord();
+    var contributionGR = new GlideRecord('x_933235_gvs_sport_contribution');
+    contributionGR.addQuery('challenge', challengeGR.getUniqueValue());
+    contributionGR.query();
+
+    while (contributionGR.next()) {
+        //iterates through related contributions and sums their values
+		sum = sum + parseInt(contributionGR.getValue('contribution'), 10);
+    }
+
+    challengeGR.setValue('current_status', sum);
+    challengeGR.update();
+
+})(current, previous);]]&gt;&lt;/script&gt;&lt;sys_class_name&gt;sys_script&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin_gv_dluo&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-11-16 13:44:19&lt;/sys_created_on&gt;&lt;sys_domain&gt;global&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;a8d37d849717111010c67b771153affb&lt;/sys_id&gt;&lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;&lt;sys_name&gt;GVS_SPORT Calculate Status (Delete)&lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport"&gt;6f13f8ed97c3111010c67b771153afd9&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="[GVS] Sport Challenge"&gt;6f13f8ed97c3111010c67b771153afd9&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_script_a8d37d849717111010c67b771153affb&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin_gv_dluo&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-18 13:39:05&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;when&gt;after&lt;/when&gt;&lt;/sys_script&gt;&lt;sys_translated_text action="delete_multiple" query="documentkey=a8d37d849717111010c67b771153affb"/&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>933794574</payload_hash>
+        <record_name>GVS_SPORT Calculate Status (Delete)</record_name>
+        <reverted_from/>
+        <source>8e6838a19747111010c67b771153af99</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-18 13:39:06</sys_created_on>
+        <sys_id>67c504709717111010c67b771153afaf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1848af6e12a0000001</sys_recorded_at>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-18 13:39:06</sys_updated_on>
+        <type>Business Rule</type>
+        <update_guid>ebc504703f171110d30209e27bce77ae</update_guid>
+        <update_guid_history>ebc504703f171110d30209e27bce77ae:933794574,682977a895d311100b87d65aadff030d:-1508837928,1e6877a8f6d31110c7e656373890f7f3:2075537385,07f6a7e8889311108cdf5cbfad185922:-2108027743,8e062ba8e7931110eacfc85a4cd1b449:1989137783,ec85b14825171110e0683ab42e8bf6eb:-1304244556,1644f1842c171110fe3c0374831a4098:1109025603,24d37d845a171110f38e8365db46f1ff:57718751</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2022-11-23 10:23:20</sys_created_on>
+        <sys_db_object display_value="" name="sys_script">sys_script</sys_db_object>
+        <sys_id>4fe72c9100274745a766b3c9d06bd3f9</sys_id>
+        <sys_metadata>a8d37d849717111010c67b771153affb</sys_metadata>
+        <sys_name>GVS_SPORT Calculate Status (Delete)</sys_name>
+        <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
+        <sys_parent display_value="Contribution">6a99d5359747511010c67b771153af09</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_scope_delete display_value="">710c3a9091534670bb75d6ef5a6d2069</sys_scope_delete>
+        <sys_update_name>sys_script_a8d37d849717111010c67b771153affb</sys_update_name>
+        <sys_update_version display_value="sys_script_a8d37d849717111010c67b771153affb">67c504709717111010c67b771153afaf</sys_update_version>
+    </sys_metadata_delete>
+</record_update>
