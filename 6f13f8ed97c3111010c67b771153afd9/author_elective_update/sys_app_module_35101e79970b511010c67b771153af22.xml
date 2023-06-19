@@ -72,6 +72,7 @@
         <sys_db_object display_value="" name="sys_app_module">sys_app_module</sys_db_object>
         <sys_id>28b8e2de80a348e29388c3aa51822444</sys_id>
         <sys_metadata>35101e79970b511010c67b771153af22</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>My Challenges</sys_name>
         <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
         <sys_parent/>
@@ -80,5 +81,7 @@
         <sys_scope_delete display_value="">710c3a9091534670bb75d6ef5a6d2069</sys_scope_delete>
         <sys_update_name>sys_app_module_35101e79970b511010c67b771153af22</sys_update_name>
         <sys_update_version display_value="sys_app_module_35101e79970b511010c67b771153af22">87b73d589713111010c67b771153af4d</sys_update_version>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-17 08:47:48</sys_updated_on>
     </sys_metadata_delete>
 </record_update>

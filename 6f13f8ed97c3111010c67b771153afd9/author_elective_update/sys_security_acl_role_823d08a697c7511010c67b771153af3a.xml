@@ -49,6 +49,7 @@
         <sys_db_object display_value="" name="sys_security_acl_role">sys_security_acl_role</sys_db_object>
         <sys_id>456f582403cc4306b707a742d52ba5a4</sys_id>
         <sys_metadata>823d08a697c7511010c67b771153af3a</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>x_933235_gvs_sport_sport_chal.x_933235_gvs_sport.user</sys_name>
         <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
         <sys_parent display_value="x_933235_gvs_sport_sport_chal">65145d319747511010c67b771153af6b</sys_parent>
@@ -57,5 +58,7 @@
         <sys_scope_delete display_value="">710c3a9091534670bb75d6ef5a6d2069</sys_scope_delete>
         <sys_update_name>sys_security_acl_role_823d08a697c7511010c67b771153af3a</sys_update_name>
         <sys_update_version display_value="sys_security_acl_role_823d08a697c7511010c67b771153af3a">644d04e697c7511010c67b771153af8c</sys_update_version>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-16 12:52:04</sys_updated_on>
     </sys_metadata_delete>
 </record_update>

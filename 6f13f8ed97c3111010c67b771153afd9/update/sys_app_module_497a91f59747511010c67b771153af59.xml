@@ -26,12 +26,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>497a91f59747511010c67b771153af59</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>My Contributions</sys_name>
         <sys_overrides/>
         <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
         <sys_policy/>
         <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
         <sys_update_name>sys_app_module_497a91f59747511010c67b771153af59</sys_update_name>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-22 10:12:20</sys_updated_on>
         <timeline_page/>
         <title>My Contributions</title>
         <uncancelable>false</uncancelable>

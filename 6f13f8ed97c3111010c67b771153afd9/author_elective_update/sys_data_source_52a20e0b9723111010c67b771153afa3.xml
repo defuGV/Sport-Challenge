@@ -112,6 +112,7 @@
         <sys_db_object display_value="" name="sys_data_source">sys_data_source</sys_db_object>
         <sys_id>a262ca5685fb4e618e2a81c96fb43021</sys_id>
         <sys_metadata>52a20e0b9723111010c67b771153afa3</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>x_933235_gvs_sport_contribution.xlsx (Up</sys_name>
         <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
         <sys_parent/>
@@ -120,5 +121,7 @@
         <sys_scope_delete display_value="">710c3a9091534670bb75d6ef5a6d2069</sys_scope_delete>
         <sys_update_name>sys_data_source_52a20e0b9723111010c67b771153afa3</sys_update_name>
         <sys_update_version display_value="sys_data_source_52a20e0b9723111010c67b771153afa3">2ea24e0b9723111010c67b771153af17</sys_update_version>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-13 11:31:08</sys_updated_on>
     </sys_metadata_delete>
 </record_update>

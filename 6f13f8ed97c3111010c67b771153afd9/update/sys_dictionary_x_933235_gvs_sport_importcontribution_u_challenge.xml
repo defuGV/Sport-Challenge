@@ -52,6 +52,8 @@
         <sys_policy/>
         <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
         <sys_update_name>sys_dictionary_x_933235_gvs_sport_importcontribution_u_challenge</sys_update_name>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-22 10:12:20</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

@@ -110,6 +110,7 @@
         <sys_db_object display_value="" name="sys_dictionary">sys_dictionary</sys_db_object>
         <sys_id>27d7aef0302345e296a6563105964964</sys_id>
         <sys_metadata>0243446e9787511010c67b771153af97</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>CO</sys_name>
         <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
         <sys_parent display_value="Sport Challenge">9e03d1f99707511010c67b771153affe</sys_parent>
@@ -118,5 +119,7 @@
         <sys_scope_delete display_value="">710c3a9091534670bb75d6ef5a6d2069</sys_scope_delete>
         <sys_update_name>sys_dictionary_x_933235_gvs_sport_sport_chal_co</sys_update_name>
         <sys_update_version display_value="sys_dictionary_x_933235_gvs_sport_sport_chal_co">a68488ae9787511010c67b771153af9b</sys_update_version>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-14 08:18:20</sys_updated_on>
     </sys_metadata_delete>
 </record_update>

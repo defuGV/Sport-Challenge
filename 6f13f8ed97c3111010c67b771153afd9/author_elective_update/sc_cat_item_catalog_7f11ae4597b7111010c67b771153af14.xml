@@ -48,6 +48,7 @@
         <sys_db_object display_value="" name="sc_cat_item_catalog">sc_cat_item_catalog</sys_db_object>
         <sys_id>b1c841d5cbe14acda5b3c2ac83c7ee41</sys_id>
         <sys_metadata>7f11ae4597b7111010c67b771153af14</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Service Catalog.Copy of Request to participate in a Sport Challenge</sys_name>
         <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
         <sys_parent display_value="">3f11ae4597b7111010c67b771153af11</sys_parent>
@@ -56,5 +57,7 @@
         <sys_scope_delete display_value="">710c3a9091534670bb75d6ef5a6d2069</sys_scope_delete>
         <sys_update_name>sc_cat_item_catalog_7f11ae4597b7111010c67b771153af14</sys_update_name>
         <sys_update_version display_value="sc_cat_item_catalog_7f11ae4597b7111010c67b771153af14">7311ee8597b7111010c67b771153af0c</sys_update_version>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-14 16:07:53</sys_updated_on>
     </sys_metadata_delete>
 </record_update>

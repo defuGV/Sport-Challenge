@@ -89,6 +89,7 @@
         <sys_db_object display_value="" name="question_choice">question_choice</sys_db_object>
         <sys_id>1b95ca0cdf1d4d0e94ef2324b84fc604</sys_id>
         <sys_metadata>6bd3d99c97a7111010c67b771153af6d</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Running</sys_name>
         <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
         <sys_parent/>
@@ -97,5 +98,7 @@
         <sys_scope_delete display_value="">710c3a9091534670bb75d6ef5a6d2069</sys_scope_delete>
         <sys_update_name>question_choice_6bd3d99c97a7111010c67b771153af6d</sys_update_name>
         <sys_update_version display_value="question_choice_6bd3d99c97a7111010c67b771153af6d">95e39d9c97a7111010c67b771153af89</sys_update_version>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-02 09:58:11</sys_updated_on>
     </sys_metadata_delete>
 </record_update>

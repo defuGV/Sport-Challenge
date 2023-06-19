@@ -84,6 +84,7 @@
         <sys_db_object display_value="" name="catalog_ui_policy">catalog_ui_policy</sys_db_object>
         <sys_id>6187cfa13e7e4f5583c2b8caab5f5a51</sys_id>
         <sys_metadata>5fb2195c97a7111010c67b771153afe9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>GVS Sport Show subtype outdoor</sys_name>
         <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
         <sys_parent/>
@@ -92,5 +93,7 @@
         <sys_scope_delete display_value="">710c3a9091534670bb75d6ef5a6d2069</sys_scope_delete>
         <sys_update_name>catalog_ui_policy_5fb2195c97a7111010c67b771153afe9</sys_update_name>
         <sys_update_version display_value="catalog_ui_policy_5fb2195c97a7111010c67b771153afe9">c769aafc97a3111010c67b771153af33</sys_update_version>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-02 09:58:26</sys_updated_on>
     </sys_metadata_delete>
 </record_update>

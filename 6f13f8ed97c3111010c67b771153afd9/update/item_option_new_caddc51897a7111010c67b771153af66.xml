@@ -17,6 +17,8 @@
         <do_not_select_first>true</do_not_select_first>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
+        <dynamic_value_dot_walk_path/>
+        <dynamic_value_field/>
         <enable_also_request_for>false</enable_also_request_for>
         <example_text/>
         <field/>
@@ -75,11 +77,14 @@
         <sys_created_by>admin_gv_dluo</sys_created_by>
         <sys_created_on>2022-11-29 15:53:34</sys_created_on>
         <sys_id>caddc51897a7111010c67b771153af66</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Which type of challenge (outdoor/indoor)?</sys_name>
         <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
         <sys_policy/>
         <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
         <sys_update_name>item_option_new_caddc51897a7111010c67b771153af66</sys_update_name>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-22 10:12:20</sys_updated_on>
         <table/>
         <tooltip/>
         <type>5</type>

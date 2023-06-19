@@ -60,6 +60,7 @@
         <sys_db_object display_value="" name="sys_filter_option_dynamic">sys_filter_option_dynamic</sys_db_object>
         <sys_id>2f95ee75b14c40009337d17ca2400000</sys_id>
         <sys_metadata>0f55efde9707511010c67b771153afa9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Test Get Company ID</sys_name>
         <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
         <sys_parent display_value="Sport Challenge">9e03d1f99707511010c67b771153affe</sys_parent>
@@ -68,5 +69,7 @@
         <sys_scope_delete display_value="">710c3a9091534670bb75d6ef5a6d2069</sys_scope_delete>
         <sys_update_name>sys_filter_option_dynamic_0f55efde9707511010c67b771153afa9</sys_update_name>
         <sys_update_version display_value="sys_filter_option_dynamic_0f55efde9707511010c67b771153afa9">c632ccea9787511010c67b771153af5e</sys_update_version>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-11-11 13:40:03</sys_updated_on>
     </sys_metadata_delete>
 </record_update>

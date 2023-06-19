@@ -89,6 +89,7 @@
         <sys_db_object display_value="" name="question_choice">question_choice</sys_db_object>
         <sys_id>7606030888c845a0a47a60adfc0a2100</sys_id>
         <sys_metadata>65becdd497a7111010c67b771153afb2</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Indoor</sys_name>
         <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
         <sys_parent display_value="Which type of challenge (outdoor/indoor)?">caddc51897a7111010c67b771153af66</sys_parent>
@@ -97,5 +98,7 @@
         <sys_scope_delete display_value="">710c3a9091534670bb75d6ef5a6d2069</sys_scope_delete>
         <sys_update_name>question_choice_65becdd497a7111010c67b771153afb2</sys_update_name>
         <sys_update_version display_value="question_choice_65becdd497a7111010c67b771153afb2">b7be455897a7111010c67b771153af27</sys_update_version>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-02 09:39:38</sys_updated_on>
     </sys_metadata_delete>
 </record_update>

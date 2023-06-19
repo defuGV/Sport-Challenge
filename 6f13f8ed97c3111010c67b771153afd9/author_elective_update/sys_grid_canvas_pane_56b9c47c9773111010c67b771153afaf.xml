@@ -52,6 +52,7 @@
         <sys_db_object display_value="" name="sys_grid_canvas_pane">sys_grid_canvas_pane</sys_db_object>
         <sys_id>0b4bd220b5004610831d7b8a53251f64</sys_id>
         <sys_metadata>56b9c47c9773111010c67b771153afaf</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>4dcb2be09733111010c67b771153afe1</sys_name>
         <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
         <sys_parent/>
@@ -60,5 +61,7 @@
         <sys_scope_delete display_value="">710c3a9091534670bb75d6ef5a6d2069</sys_scope_delete>
         <sys_update_name>sys_grid_canvas_pane_56b9c47c9773111010c67b771153afaf</sys_update_name>
         <sys_update_version display_value="sys_grid_canvas_pane_56b9c47c9773111010c67b771153afaf">6d90b4b09737111010c67b771153afdd</sys_update_version>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2022-12-13 13:37:50</sys_updated_on>
     </sys_metadata_delete>
 </record_update>
