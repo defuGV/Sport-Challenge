@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_933235_gvs_sport. Check user location</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name> Check user location</name>
+        <script><![CDATA[(function(language, dataQuery, source /* returns source environment legal entity name. It can be 'mbag' or 'dtag' or 'everest'.*/ ) {
+	/**
+	 * Function queries and returns personal information on user
+	 * @param {json} dataQuery - data containing user_name of the requested for
+	 * @return {string} cost center associated with the given user sys id
+	 */
+	
+    var userLocation = "";
+	var validated = false;
+    var userID = JSON.parse(dataQuery).userID;
+    //  Check if the user exist in personal data table
+    var userGR = new x_infte_eve_pdata.EVE_PDATA_Utils().getUserByIdentifier(userID);
+
+    if (userGR != null) {
+        //get user location
+		var pdata = new x_infte_eve_pdata.EVE_PDATA_Utils().getPersonalDataByUser(userGR, ['location'], 'SIM Card request', 'user location required');
+        if (pdata['location'] != '') {
+			var locationGR = new GlideRecord('cmn_location');
+            if (locationGR.get(pdata['location'])) {
+                userLocation = locationGR.getValue('country');
+            }
+        }
+    }
+	if (userLocation == "Germany") {
+		validated = true;
+	}
+
+    return validated;
+})(language, dataQuery, source);]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>admin_gv_dluo</sys_created_by>
+        <sys_created_on>2023-09-05 11:24:22</sys_created_on>
+        <sys_id>6e5d8ed647013110c1535e52e36d4339</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name> Check user location</sys_name>
+        <sys_package display_value="[GVS] Sport Challenge" source="x_933235_gvs_sport">6f13f8ed97c3111010c67b771153afd9</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="[GVS] Sport Challenge">6f13f8ed97c3111010c67b771153afd9</sys_scope>
+        <sys_update_name>sys_script_include_6e5d8ed647013110c1535e52e36d4339</sys_update_name>
+        <sys_updated_by>admin_gv_dluo</sys_updated_by>
+        <sys_updated_on>2023-09-05 11:24:22</sys_updated_on>
+    </sys_script_include>
+</record_update>
